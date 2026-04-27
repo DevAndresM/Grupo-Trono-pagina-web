@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"from PIL import Image; print\\('Pillow OK'\\)\")",
+      "Bash(py --version)",
+      "Bash(where python3 *)",
+      "Bash(py -3 --version)",
+      "Bash(python3 -c \"from PIL import Image; print\\('Pillow OK'\\)\")",
+      "Bash(node -e \"console.log\\('Node OK'\\)\")",
+      "Bash(pip install *)",
+      "Bash(pip3 install *)",
+      "PowerShell(python3 -m pip install Pillow --quiet)",
+      "PowerShell(python3 -c \"from PIL import Image; print\\('Pillow OK'\\)\")",
+      "PowerShell(Get-Command py -ErrorAction SilentlyContinue)",
+      "PowerShell(py -3 -m pip install Pillow --quiet)",
+      "PowerShell(py -3 -c \"from PIL import Image; print\\('Pillow OK'\\)\")"
+    ]
+  }
+}

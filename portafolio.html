@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio de Grupo Trono — proyectos realizados en producción audiovisual, hardware, software y ciberseguridad." />
+  <title>Portafolio | Grupo Trono</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/logo-grupo-trono.png" />
+  <meta property="og:site_name" content="Grupo Trono" />
+  <meta property="og:title" content="Portafolio | Grupo Trono" />
+  <meta property="og:description" content="Proyectos realizados por Grupo Trono y sus filiales." />
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo"><img src="img/logo-grupo-trono-nav.png" alt="Grupo Trono" /></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li class="nav-dropdown">
+        <a href="servicios/productions.html">Servicios ▾</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="servicios/productions.html"><img src="img/crown-productions.png" class="nav-crown" alt=""> Trono Productions</a></li>
+          <li><a href="servicios/hardware.html"><img src="img/crown-hardware.png" class="nav-crown" alt=""> Trono Hardware</a></li>
+          <li><a href="servicios/software.html"><img src="img/crown-software.png" class="nav-crown" alt=""> Trono Software</a></li>
+          <li><a href="servicios/security.html"><img src="img/crown-security.png" class="nav-crown" alt=""> Trono Security</a></li>
+          <li><a href="servicios/games.html"><img src="img/crown-games.png" class="nav-crown" alt=""> Trono Games</a></li>
+          <li><a href="#" class="nav-soon"><img src="img/crown-gt.png" class="nav-crown" alt=""> Trono Net <span class="nav-badge-soon">Pronto</span></a></li>
+          <li><a href="#" class="nav-soon"><img src="img/crown-gt.png" class="nav-crown" alt=""> Trono Energy <span class="nav-badge-soon">Pronto</span></a></li>
+        </ul>
+      </li>
+      <li><a href="portafolio.html" class="activo">Portafolio</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+      <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="contenedor">
+      <div class="breadcrumb">
+        <a href="index.html">Inicio</a><span>/</span><span>Portafolio</span>
+      </div>
+      <h1>Nuestro <span class="texto-dorado">portafolio</span></h1>
+      <p>Una muestra de los proyectos que hemos desarrollado para clientes en distintos sectores e industrias.</p>
+    </div>
+  </section>
+
+  <!-- FILTROS Y PROYECTOS -->
+  <section class="seccion">
+    <div class="contenedor">
+
+      <!-- Filtros -->
+      <div class="filtros animar">
+        <button class="filtro-btn activo" data-filtro="todos">Todos</button>
+        <button class="filtro-btn" data-filtro="productions">🎬 Productions</button>
+        <button class="filtro-btn" data-filtro="hardware">🔧 Hardware</button>
+        <button class="filtro-btn" data-filtro="software">💻 Software</button>
+        <button class="filtro-btn" data-filtro="security">🔒 Security</button>
+      </div>
+
+      <!-- Grid de proyectos -->
+      <div class="grid-3">
+
+        <!-- Productions -->
+        <div class="portfolio-item animar" data-categoria="productions" style="transition:opacity 0.3s, transform 0.3s;">
+          <div class="portfolio-item-bg" style="background:linear-gradient(135deg,#4a1f70,#1a0a2e);">🎬</div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h4>Campaña Digital 360°</h4>
+              <span>Trono Productions — Marketing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item animar animar-delay-1" data-categoria="productions" style="transition:opacity 0.3s, transform 0.3s;">
+          <div class="portfolio-item-bg" style="background:linear-gradient(135deg,#2d1a4a,#0d0d1a);">🎵</div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h4>Videoclip "Noche de Reyes"</h4>
+              <span>Trono Productions — Videoclip</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item animar animar-delay-2" data-categoria="productions" style="transition:opacity 0.3s, transform 0.3s;">
+          <div class="portfolio-item-bg" style="background:linear-gradient(135deg,#1a1a4a,#0a0a2a);">📱</div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h4>Gestión Redes Sociales</h4>
+              <span>Trono Productions — Social Media</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Software -->
+        <div class="portfolio-item animar animar-delay-1" data-categoria="software" style="transition:opacity 0.3s, transform 0.3s;">
+          <div class="portfolio-item-bg" style="background:linear-gradient(135deg,#0a2a4a,#0a0a1a);">🌐</div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h4>Sitio Web Restaurante</h4>
+              <span>Trono Software — Web + QR</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item animar animar-delay-2" data-categoria="software" style="transition:opacity 0.3s, transform 0.3s;">
+          <div class="portfolio-item-bg" style="background:linear-gradient(135deg,#1a2a0a,#0a1a0a);">🤖</div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h4>Chatbot IA para e-commerce</h4>
+              <span>Trono Software — Inteligencia Artificial</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item animar animar-delay-3" data-categoria="software" style="transition:opacity 0.3s, transform 0.3s;">
+          <div class="portfolio-item-bg" style="background:linear-gradient(135deg,#2a1a0a,#1a0a0a);">📦</div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h4>App de Gestión Interna</h4>
+              <span>Trono Software — App Móvil</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Security -->
+        <div class="portfolio-item animar" data-categoria="security" style="transition:opacity 0.3s, transform 0.3s;">
+          <div class="portfolio-item-bg" style="background:linear-gradient(135deg,#1a3a1a,#0a0a0a);">📷</div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h4>CCTV Corporativo 32 cámaras</h4>
+              <span>Trono Security — Videovigilancia</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item animar animar-delay-1" data-categoria="security" style="transition:opacity 0.3s, transform 0.3s;">
+          <div class="portfolio-item-bg" style="background:linear-gradient(135deg,#0a2a2a,#0a0a1a);">🛡️</div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h4>Auditoría de Ciberseguridad</h4>
+              <span>Trono Security — Empresa tecnológica</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hardware -->
+        <div class="portfolio-item animar animar-delay-2" data-categoria="hardware" style="transition:opacity 0.3s, transform 0.3s;">
+          <div class="portfolio-item-bg" style="background:linear-gradient(135deg,#2a2a0a,#1a1a0a);">🔧</div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-info">
+              <h4>Mantenimiento Flota 50 PCs</h4>
+              <span>Trono Hardware — Empresa</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="seccion" style="background:linear-gradient(180deg,transparent,rgba(107,47,160,0.05),transparent);">
+    <div class="contenedor">
+      <div class="seccion-titulo animar">
+        <h2>Lo que dicen <span>nuestros clientes</span></h2>
+        <div class="separador"></div>
+      </div>
+
+      <div class="grid-3" style="margin-top:48px;">
+        <div class="card animar" style="border-left:3px solid var(--dorado);">
+          <p style="font-style:italic;margin-bottom:20px;">"Grupo Trono transformó completamente nuestra presencia digital. El equipo es profesional, cumple los tiempos y el resultado superó nuestras expectativas."</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--morado),var(--dorado));display:flex;align-items:center;justify-content:center;font-size:1.2rem;">👤</div>
+            <div>
+              <div style="font-weight:600;font-size:0.9rem;color:var(--blanco);">Carlos M.</div>
+              <div style="font-size:0.8rem;color:var(--dorado);">CEO, Empresa de tecnología</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card animar animar-delay-1" style="border-left:3px solid var(--morado-claro);">
+          <p style="font-style:italic;margin-bottom:20px;">"Trono Productions produjo el videoclip de mi canción y quedé impresionado. Calidad cinematográfica real a un precio justo."</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--morado),var(--dorado));display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🎤</div>
+            <div>
+              <div style="font-weight:600;font-size:0.9rem;color:var(--blanco);">Andrés R.</div>
+              <div style="font-size:0.8rem;color:var(--morado-claro);">Cantante independiente</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card animar animar-delay-2" style="border-left:3px solid var(--dorado);">
+          <p style="font-style:italic;margin-bottom:20px;">"Trono Security instaló nuestro sistema de cámaras en tiempo récord. El sistema de monitoreo remoto es excelente. Totalmente recomendado."</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--morado),var(--dorado));display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🏢</div>
+            <div>
+              <div style="font-weight:600;font-size:0.9rem;color:var(--blanco);">Laura P.</div>
+              <div style="font-size:0.8rem;color:var(--dorado);">Gerente, Restaurante</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="seccion" style="padding-top:0;">
+    <div class="contenedor">
+      <div class="cta-banner animar">
+        <h2>¿Quieres ser nuestro próximo <span class="texto-dorado">caso de éxito</span>?</h2>
+        <p>Cuéntanos tu proyecto y te preparamos una propuesta sin costo ni compromiso.</p>
+        <div class="cta-botones">
+          <a href="contacto.html" class="btn btn-dorado">Iniciar proyecto</a>
+          <a href="nosotros.html" class="btn btn-outline">Conocer el equipo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer-grid">
+        <div class="footer-marca">
+          <h3>GRUPO TRONO</h3>
+          <p>Holding tecnológico especializado en producción, hardware, software, ciberseguridad y videojuegos.</p>
+          <div class="footer-social">
+            <a href="#">📷</a><a href="#">📘</a><a href="#">▶️</a><a href="#">💼</a><a href="#">💬</a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Filiales</h4><ul>
+          <li><a href="servicios/productions.html">Trono Productions</a></li>
+          <li><a href="servicios/hardware.html">Trono Hardware</a></li>
+          <li><a href="servicios/software.html">Trono Software</a></li>
+          <li><a href="servicios/security.html">Trono Security</a></li>
+          <li><a href="servicios/games.html">Trono Games</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Empresa</h4><ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="portafolio.html">Portafolio</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Contacto</h4><ul>
+          <li><a href="mailto:contacto@grupotrono.com">contacto@grupotrono.com</a></li>
+          <li><a href="tel:+57000000000">+57 (000) 000-0000</a></li>
+          <li><a href="#">Colombia</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="anio-actual"></span> Grupo Trono. Todos los derechos reservados.</p>
+        <div class="footer-bottom-links"><a href="#">Privacidad</a><a href="#">Términos</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <!-- WhatsApp Flotante -->
+  <a href="https://wa.me/57000000000?text=Hola%20Grupo%20Trono!%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios."
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    💬
+  </a>
+
+</body>
+</html>
+
+
+
+
+
+

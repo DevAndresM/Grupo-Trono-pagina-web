@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cómo la IA está transformando los negocios en 2026 — Blog Grupo Trono" />
+  <title>Cómo la IA está transformando los negocios en 2026 | Blog Grupo Trono</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="icon" type="image/png" href="../img/favicon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../img/logo-grupo-trono.png" />
+  <meta property="og:site_name" content="Grupo Trono" />
+  <meta property="og:title" content="Blog | Grupo Trono" />
+  <meta property="og:description" content="Artículos y noticias sobre tecnología, diseño y negocios digitales." />
+  <style>
+    .articulo-cuerpo {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .articulo-cuerpo h2 {
+      font-size: 1.5rem;
+      margin: 40px 0 16px;
+      color: var(--blanco);
+    }
+    .articulo-cuerpo h3 {
+      font-size: 1.2rem;
+      margin: 28px 0 12px;
+      color: var(--dorado);
+    }
+    .articulo-cuerpo p {
+      color: var(--gris-claro);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .articulo-cuerpo ul, .articulo-cuerpo ol {
+      padding-left: 24px;
+      margin-bottom: 20px;
+    }
+    .articulo-cuerpo li {
+      color: var(--gris-claro);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+    .articulo-cuerpo blockquote {
+      border-left: 3px solid var(--dorado);
+      padding: 16px 24px;
+      background: rgba(201,168,76,0.05);
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+      font-style: italic;
+      color: var(--gris-claro);
+    }
+    .articulo-header {
+      padding: 140px 0 64px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .articulo-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(107,47,160,0.2), transparent 70%), var(--negro);
+    }
+    .articulo-header .contenedor {
+      position: relative;
+      z-index: 1;
+    }
+    .separador-articulo {
+      width: 100%;
+      height: 1px;
+      background: var(--negro-borde);
+      margin: 40px 0;
+    }
+    .autor-box {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 24px;
+      background: var(--negro-card);
+      border: 1px solid var(--negro-borde);
+      border-radius: var(--radio-grande);
+      margin-top: 48px;
+    }
+    .autor-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--morado), var(--dorado));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo"><img src="../img/logo-grupo-trono-nav.png" alt="Grupo Trono" /></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../nosotros.html">Nosotros</a></li>
+      <li class="nav-dropdown">
+        <a href="../servicios/productions.html">Servicios ▾</a>
+        <ul class="nav-dropdown-menu">
+            <li><a href="../servicios/productions.html"><img src="../img/crown-productions.png" class="nav-crown" alt=""> Trono Productions</a></li>
+            <li><a href="../servicios/hardware.html"><img src="../img/crown-hardware.png" class="nav-crown" alt=""> Trono Hardware</a></li>
+            <li><a href="../servicios/software.html"><img src="../img/crown-software.png" class="nav-crown" alt=""> Trono Software</a></li>
+            <li><a href="../servicios/security.html"><img src="../img/crown-security.png" class="nav-crown" alt=""> Trono Security</a></li>
+            <li><a href="../servicios/games.html"><img src="../img/crown-games.png" class="nav-crown" alt=""> Trono Games</a></li>
+            <li><a href="#" class="nav-soon"><img src="../img/crown-gt.png" class="nav-crown" alt=""> Trono Net <span class="nav-badge-soon">Pronto</span></a></li>
+            <li><a href="#" class="nav-soon"><img src="../img/crown-gt.png" class="nav-crown" alt=""> Trono Energy <span class="nav-badge-soon">Pronto</span></a></li>
+          </ul>
+      </li>
+      <li><a href="../portafolio.html">Portafolio</a></li>
+      <li><a href="../videos.html">Videos</a></li>
+      <li><a href="index.html" class="activo">Blog</a></li>
+      <li><a href="../contacto.html" class="nav-cta">Contacto</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HEADER DEL ARTÍCULO -->
+  <header class="articulo-header">
+    <div class="contenedor">
+      <div class="breadcrumb" style="justify-content:center;margin-bottom:24px;">
+        <a href="../index.html">Inicio</a><span>/</span>
+        <a href="index.html">Blog</a><span>/</span>
+        <span>Artículo</span>
+      </div>
+      <span class="blog-etiqueta" style="display:inline-block;margin-bottom:20px;">🤖 Inteligencia Artificial</span>
+      <h1 style="max-width:760px;margin:0 auto 24px;">
+        Cómo la IA está <span class="texto-dorado">transformando</span> los negocios en 2026
+      </h1>
+      <div class="blog-meta" style="justify-content:center;margin-bottom:0;">
+        <span>✍️ Equipo Trono Software</span>
+        <span>📅 15 de abril, 2026</span>
+        <span>⏱ 5 min de lectura</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- CUERPO DEL ARTÍCULO -->
+  <section class="seccion" style="padding-top:0;">
+    <div class="contenedor">
+      <article class="articulo-cuerpo">
+
+        <!-- Imagen banner -->
+        <div style="background:linear-gradient(135deg,var(--morado-oscuro),var(--negro-card));border-radius:16px;height:320px;display:flex;align-items:center;justify-content:center;font-size:5rem;margin-bottom:40px;border:1px solid var(--negro-borde);">🤖</div>
+
+        <p>
+          La inteligencia artificial ya no es ciencia ficción ni un lujo reservado para las grandes corporaciones.
+          En 2026, las empresas que no están adoptando IA en sus procesos están perdiendo competitividad frente
+          a quienes sí lo hacen. En este artículo te explicamos qué está pasando, por qué importa y cómo
+          puedes empezar a implementarla en tu negocio hoy mismo.
+        </p>
+
+        <h2>¿Qué cambió en los últimos dos años?</h2>
+        <p>
+          Hasta hace poco, integrar IA en un negocio requería un equipo de ingenieros especializados, servidores
+          costosos y meses de desarrollo. Hoy, gracias a APIs como las de OpenAI, Claude de Anthropic y otras
+          herramientas accesibles, cualquier empresa puede automatizar tareas, analizar datos y crear experiencias
+          personalizadas sin necesidad de grandes inversiones iniciales.
+        </p>
+
+        <blockquote>
+          "La IA no va a reemplazar a los humanos, pero los humanos que usan IA sí van a reemplazar a los que no la usan."
+        </blockquote>
+
+        <h2>Áreas donde la IA ya está generando impacto real</h2>
+
+        <h3>1. Atención al cliente automatizada</h3>
+        <p>
+          Los chatbots modernos no son los robots torpes de hace cinco años. Con IA generativa, pueden
+          responder preguntas complejas, resolver problemas, hacer reservaciones y hasta cerrar ventas,
+          disponibles las 24 horas sin costo adicional por turno.
+        </p>
+
+        <h3>2. Análisis de datos y toma de decisiones</h3>
+        <p>
+          Antes necesitabas un analista de datos para interpretar tus métricas de ventas o redes sociales.
+          Hoy, herramientas con IA pueden procesar miles de datos en segundos y entregarte conclusiones
+          accionables en lenguaje natural.
+        </p>
+
+        <h3>3. Creación de contenido</h3>
+        <p>
+          Desde redacción de artículos hasta generación de imágenes, la IA está acelerando los procesos
+          creativos. En Trono Productions, usamos herramientas de IA para acelerar la preproducción,
+          generación de guiones y edición de video.
+        </p>
+
+        <h3>4. Automatización de procesos internos</h3>
+        <p>
+          Facturación, programación de citas, seguimiento de clientes, reportes periódicos. Tareas
+          repetitivas que consumen horas de trabajo humano pueden automatizarse completamente con
+          flujos de trabajo inteligentes.
+        </p>
+
+        <div class="separador-articulo"></div>
+
+        <h2>¿Cómo puede ayudarte Grupo Trono?</h2>
+        <p>
+          En <strong style="color:var(--dorado);">Trono Software</strong>, implementamos soluciones de
+          inteligencia artificial a medida para empresas de todos los tamaños. Desde chatbots para tu
+          sitio web hasta sistemas de análisis de datos integrados con tu plataforma actual.
+        </p>
+
+        <ul>
+          <li>✦ Diagnóstico gratuito de oportunidades de automatización en tu empresa</li>
+          <li>✦ Implementación de chatbots con IA para atención al cliente</li>
+          <li>✦ Integración de IA con sistemas existentes (CRM, ERP, e-commerce)</li>
+          <li>✦ Capacitación de tu equipo para trabajar con herramientas de IA</li>
+          <li>✦ Soporte continuo y mejora iterativa de las soluciones</li>
+        </ul>
+
+        <div class="separador-articulo"></div>
+
+        <!-- Autor -->
+        <div class="autor-box">
+          <div class="autor-avatar">👨‍💻</div>
+          <div>
+            <div style="font-weight:600;color:var(--blanco);margin-bottom:4px;">Equipo Trono Software</div>
+            <p style="font-size:0.85rem;margin:0;">Especialistas en desarrollo web, inteligencia artificial y soluciones digitales a medida. Compartimos conocimiento para ayudarte a crecer.</p>
+          </div>
+        </div>
+
+        <!-- Compartir -->
+        <div style="margin-top:40px;padding:24px;background:var(--negro-card);border:1px solid var(--negro-borde);border-radius:var(--radio-grande);text-align:center;">
+          <p style="margin-bottom:16px;color:var(--gris-claro);">¿Te fue útil este artículo? Compártelo:</p>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+            <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:8px 20px;">📱 WhatsApp</a>
+            <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:8px 20px;">📘 Facebook</a>
+            <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:8px 20px;">💼 LinkedIn</a>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-banner" style="margin-top:40px;">
+          <h2 style="font-size:1.4rem;">¿Listo para implementar IA en tu <span class="texto-dorado">empresa</span>?</h2>
+          <p>Agenda una asesoría gratuita con nuestro equipo de Trono Software.</p>
+          <div class="cta-botones" style="margin-top:24px;">
+            <a href="../contacto.html" class="btn btn-dorado">Hablar con un experto</a>
+            <a href="index.html" class="btn btn-outline">Ver más artículos</a>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer-grid">
+        <div class="footer-marca">
+          <h3>GRUPO TRONO</h3>
+          <p>Holding tecnológico especializado en producción, hardware, software, ciberseguridad y videojuegos.</p>
+          <div class="footer-social">
+            <a href="#">📷</a><a href="#">📘</a><a href="#">▶️</a><a href="#">💼</a><a href="#">💬</a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Filiales</h4><ul>
+          <li><a href="../servicios/productions.html">Trono Productions</a></li>
+          <li><a href="../servicios/hardware.html">Trono Hardware</a></li>
+          <li><a href="../servicios/software.html">Trono Software</a></li>
+          <li><a href="../servicios/security.html">Trono Security</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Empresa</h4><ul>
+          <li><a href="../nosotros.html">Nosotros</a></li>
+          <li><a href="../portafolio.html">Portafolio</a></li>
+          <li><a href="../videos.html">Videos</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="../contacto.html">Contacto</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Contacto</h4><ul>
+          <li><a href="mailto:contacto@grupotrono.com">contacto@grupotrono.com</a></li>
+          <li><a href="tel:+57000000000">+57 (000) 000-0000</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="anio-actual"></span> Grupo Trono. Todos los derechos reservados.</p>
+        <div class="footer-bottom-links"><a href="#">Privacidad</a><a href="#">Términos</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Videos de Grupo Trono — producciones audiovisuales, videoclips y contenido de nuestras filiales." />
+  <title>Videos | Grupo Trono</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/logo-grupo-trono.png" />
+  <meta property="og:site_name" content="Grupo Trono" />
+  <meta property="og:title" content="Videos | Grupo Trono" />
+  <meta property="og:description" content="Mira nuestros videos y producciones audiovisuales." />
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo"><img src="img/logo-grupo-trono-nav.png" alt="Grupo Trono" /></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li class="nav-dropdown">
+        <a href="servicios/productions.html">Servicios ▾</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="servicios/productions.html"><img src="img/crown-productions.png" class="nav-crown" alt=""> Trono Productions</a></li>
+          <li><a href="servicios/hardware.html"><img src="img/crown-hardware.png" class="nav-crown" alt=""> Trono Hardware</a></li>
+          <li><a href="servicios/software.html"><img src="img/crown-software.png" class="nav-crown" alt=""> Trono Software</a></li>
+          <li><a href="servicios/security.html"><img src="img/crown-security.png" class="nav-crown" alt=""> Trono Security</a></li>
+          <li><a href="servicios/games.html"><img src="img/crown-games.png" class="nav-crown" alt=""> Trono Games</a></li>
+          <li><a href="#" class="nav-soon"><img src="img/crown-gt.png" class="nav-crown" alt=""> Trono Net <span class="nav-badge-soon">Pronto</span></a></li>
+          <li><a href="#" class="nav-soon"><img src="img/crown-gt.png" class="nav-crown" alt=""> Trono Energy <span class="nav-badge-soon">Pronto</span></a></li>
+        </ul>
+      </li>
+      <li><a href="portafolio.html">Portafolio</a></li>
+      <li><a href="videos.html" class="activo">Videos</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+      <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="contenedor">
+      <div class="breadcrumb">
+        <a href="index.html">Inicio</a><span>/</span><span>Videos</span>
+      </div>
+      <h1>Nuestros <span class="texto-dorado">videos</span></h1>
+      <p>Producciones audiovisuales, tutoriales, videoclips y contenido de Grupo Trono y sus filiales.</p>
+    </div>
+  </section>
+
+  <!-- VIDEO DESTACADO -->
+  <section class="seccion">
+    <div class="contenedor">
+      <div class="seccion-titulo animar">
+        <h2>Video <span>destacado</span></h2>
+        <div class="separador"></div>
+      </div>
+
+      <div style="max-width:800px;margin:48px auto 0;" class="animar">
+        <!-- Reemplaza VIDEO_ID_AQUI con el ID real de tu video de YouTube -->
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Video destacado Grupo Trono"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div style="margin-top:20px;text-align:center;">
+          <h3 style="margin-bottom:8px;">Grupo Trono — Presentación Corporativa</h3>
+          <p style="font-size:0.9rem;">Conoce todo lo que hacemos y cómo podemos ayudarte.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORÍAS DE VIDEOS -->
+  <section class="seccion" style="padding-top:0;">
+    <div class="contenedor">
+
+      <!-- Filtros -->
+      <div class="filtros animar">
+        <button class="filtro-btn activo" data-filtro="todos">Todos</button>
+        <button class="filtro-btn" data-filtro="productions">🎬 Productions</button>
+        <button class="filtro-btn" data-filtro="software">💻 Software</button>
+        <button class="filtro-btn" data-filtro="security">🔒 Security</button>
+        <button class="filtro-btn" data-filtro="tutoriales">📚 Tutoriales</button>
+      </div>
+
+      <div class="grid-3" style="margin-top:0;">
+
+        <!-- Video 1 - Productions -->
+        <div data-categoria="productions" class="animar" style="transition:opacity 0.3s,transform 0.3s;">
+          <div class="video-wrapper" style="margin-bottom:16px;">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Producción de videoclip"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <span class="blog-etiqueta">Productions</span>
+          <h4 style="margin:8px 0 4px;">Detrás de cámaras — Videoclip</h4>
+          <p style="font-size:0.82rem;color:var(--gris);">Proceso de producción de un videoclip profesional con Trono Productions.</p>
+        </div>
+
+        <!-- Video 2 - Software -->
+        <div data-categoria="software" class="animar animar-delay-1" style="transition:opacity 0.3s,transform 0.3s;">
+          <div class="video-wrapper" style="margin-bottom:16px;">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Demo app desarrollo web"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <span class="blog-etiqueta" style="background:rgba(201,168,76,0.1);color:var(--dorado);">Software</span>
+          <h4 style="margin:8px 0 4px;">Demo — App de Gestión QR</h4>
+          <p style="font-size:0.82rem;color:var(--gris);">Presentación de nuestra solución de menú digital con código QR para restaurantes.</p>
+        </div>
+
+        <!-- Video 3 - Security -->
+        <div data-categoria="security" class="animar animar-delay-2" style="transition:opacity 0.3s,transform 0.3s;">
+          <div class="video-wrapper" style="margin-bottom:16px;">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Instalación CCTV"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <span class="blog-etiqueta" style="background:rgba(34,197,94,0.1);color:#4ade80;">Security</span>
+          <h4 style="margin:8px 0 4px;">Instalación sistema CCTV</h4>
+          <p style="font-size:0.82rem;color:var(--gris);">Proceso de instalación de 32 cámaras en empresa del sector industrial.</p>
+        </div>
+
+        <!-- Video 4 - Tutorial -->
+        <div data-categoria="tutoriales" class="animar animar-delay-1" style="transition:opacity 0.3s,transform 0.3s;">
+          <div class="video-wrapper" style="margin-bottom:16px;">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Tutorial ciberseguridad"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <span class="blog-etiqueta" style="background:rgba(251,191,36,0.1);color:#fbbf24;">Tutorial</span>
+          <h4 style="margin:8px 0 4px;">5 hábitos de ciberseguridad</h4>
+          <p style="font-size:0.82rem;color:var(--gris);">Aprende las prácticas básicas para proteger tu empresa de ataques cibernéticos.</p>
+        </div>
+
+        <!-- Video 5 - Productions -->
+        <div data-categoria="productions" class="animar animar-delay-2" style="transition:opacity 0.3s,transform 0.3s;">
+          <div class="video-wrapper" style="margin-bottom:16px;">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Campaña publicitaria"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <span class="blog-etiqueta">Productions</span>
+          <h4 style="margin:8px 0 4px;">Campaña publicitaria — Cliente</h4>
+          <p style="font-size:0.82rem;color:var(--gris);">Producción completa de campaña audiovisual para empresa del sector gastronómico.</p>
+        </div>
+
+        <!-- Video 6 - Tutorial -->
+        <div data-categoria="tutoriales" class="animar animar-delay-3" style="transition:opacity 0.3s,transform 0.3s;">
+          <div class="video-wrapper" style="margin-bottom:16px;">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Tutorial mantenimiento PC"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <span class="blog-etiqueta" style="background:rgba(251,191,36,0.1);color:#fbbf24;">Tutorial</span>
+          <h4 style="margin:8px 0 4px;">Cómo limpiar tu PC correctamente</h4>
+          <p style="font-size:0.82rem;color:var(--gris);">Guía paso a paso para el mantenimiento preventivo básico de tu computadora.</p>
+        </div>
+
+      </div>
+
+      <!-- Botón canal YouTube -->
+      <div style="text-align:center;margin-top:48px;" class="animar">
+        <a href="https://www.youtube.com/@grupotrono" target="_blank" rel="noopener" class="btn btn-dorado" style="display:inline-flex;align-items:center;gap:10px;">
+          ▶️ Ver canal completo en YouTube
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="seccion" style="padding-top:0;">
+    <div class="contenedor">
+      <div class="cta-banner animar">
+        <h2>¿Quieres un video <span class="texto-dorado">profesional</span> para tu marca?</h2>
+        <p>Desde un reel para redes hasta una producción cinematográfica. Trono Productions tiene la solución.</p>
+        <div class="cta-botones">
+          <a href="contacto.html" class="btn btn-dorado">Solicitar producción</a>
+          <a href="servicios/productions.html" class="btn btn-outline">Ver Trono Productions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer-grid">
+        <div class="footer-marca">
+          <h3>GRUPO TRONO</h3>
+          <p>Holding tecnológico especializado en producción, hardware, software, ciberseguridad y videojuegos.</p>
+          <div class="footer-social">
+            <a href="#">📷</a><a href="#">📘</a><a href="#">▶️</a><a href="#">💼</a><a href="#">💬</a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Filiales</h4><ul>
+          <li><a href="servicios/productions.html">Trono Productions</a></li>
+          <li><a href="servicios/hardware.html">Trono Hardware</a></li>
+          <li><a href="servicios/software.html">Trono Software</a></li>
+          <li><a href="servicios/security.html">Trono Security</a></li>
+          <li><a href="servicios/games.html">Trono Games</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Empresa</h4><ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="portafolio.html">Portafolio</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Contacto</h4><ul>
+          <li><a href="mailto:contacto@grupotrono.com">contacto@grupotrono.com</a></li>
+          <li><a href="tel:+57000000000">+57 (000) 000-0000</a></li>
+          <li><a href="#">Colombia</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="anio-actual"></span> Grupo Trono. Todos los derechos reservados.</p>
+        <div class="footer-bottom-links"><a href="#">Privacidad</a><a href="#">Términos</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Filtro de videos
+    const filtros = document.querySelectorAll('.filtro-btn');
+    const videoItems = document.querySelectorAll('[data-categoria]');
+    filtros.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filtros.forEach(b => b.classList.remove('activo'));
+        btn.classList.add('activo');
+        const filtro = btn.dataset.filtro;
+        videoItems.forEach(item => {
+          const mostrar = filtro === 'todos' || item.dataset.categoria === filtro;
+          item.style.opacity = mostrar ? '1' : '0.2';
+          item.style.pointerEvents = mostrar ? 'all' : 'none';
+        });
+      });
+    });
+  </script>
+  <!-- WhatsApp Flotante -->
+  <a href="https://wa.me/57000000000?text=Hola%20Grupo%20Trono!%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios."
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    💬
+  </a>
+
+</body>
+</html>
+
+
+
+
+
+

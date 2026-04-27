@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog de Grupo Trono — artículos sobre tecnología, ciberseguridad, marketing digital y más." />
+  <title>Blog | Grupo Trono</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="icon" type="image/png" href="../img/favicon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../img/logo-grupo-trono.png" />
+  <meta property="og:site_name" content="Grupo Trono" />
+  <meta property="og:title" content="Blog | Grupo Trono" />
+  <meta property="og:description" content="Artículos y noticias sobre tecnología, diseño y negocios digitales." />
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo"><img src="../img/logo-grupo-trono-nav.png" alt="Grupo Trono" /></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../nosotros.html">Nosotros</a></li>
+      <li class="nav-dropdown">
+        <a href="../servicios/productions.html">Servicios ▾</a>
+        <ul class="nav-dropdown-menu">
+            <li><a href="../servicios/productions.html"><img src="../img/crown-productions.png" class="nav-crown" alt=""> Trono Productions</a></li>
+            <li><a href="../servicios/hardware.html"><img src="../img/crown-hardware.png" class="nav-crown" alt=""> Trono Hardware</a></li>
+            <li><a href="../servicios/software.html"><img src="../img/crown-software.png" class="nav-crown" alt=""> Trono Software</a></li>
+            <li><a href="../servicios/security.html"><img src="../img/crown-security.png" class="nav-crown" alt=""> Trono Security</a></li>
+            <li><a href="../servicios/games.html"><img src="../img/crown-games.png" class="nav-crown" alt=""> Trono Games</a></li>
+            <li><a href="#" class="nav-soon"><img src="../img/crown-gt.png" class="nav-crown" alt=""> Trono Net <span class="nav-badge-soon">Pronto</span></a></li>
+            <li><a href="#" class="nav-soon"><img src="../img/crown-gt.png" class="nav-crown" alt=""> Trono Energy <span class="nav-badge-soon">Pronto</span></a></li>
+          </ul>
+      </li>
+      <li><a href="../portafolio.html">Portafolio</a></li>
+      <li><a href="../videos.html">Videos</a></li>
+      <li><a href="index.html" class="activo">Blog</a></li>
+      <li><a href="../contacto.html" class="nav-cta">Contacto</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="contenedor">
+      <div class="breadcrumb">
+        <a href="../index.html">Inicio</a><span>/</span><span>Blog</span>
+      </div>
+      <h1>Blog de <span class="texto-dorado">Grupo Trono</span></h1>
+      <p>Artículos, tendencias y recursos sobre tecnología, producción audiovisual, ciberseguridad y más.</p>
+    </div>
+  </section>
+
+  <!-- ARTÍCULO DESTACADO -->
+  <section class="seccion">
+    <div class="contenedor">
+      <div class="seccion-titulo animar">
+        <h2>Artículo <span>destacado</span></h2>
+        <div class="separador"></div>
+      </div>
+
+      <div class="card animar" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:40px;padding:48px;" >
+        <div style="background:linear-gradient(135deg,var(--morado-oscuro),var(--negro-card));border-radius:12px;height:280px;display:flex;align-items:center;justify-content:center;font-size:5rem;">🤖</div>
+        <div>
+          <span class="blog-etiqueta">Inteligencia Artificial</span>
+          <h2 style="margin:12px 0 16px;font-size:1.5rem;">Cómo la IA está transformando los negocios en 2026</h2>
+          <p style="margin-bottom:20px;">La inteligencia artificial dejó de ser solo una tendencia y se convirtió en una herramienta real para empresas de todos los tamaños. Descubre cómo puedes implementarla en tu negocio hoy.</p>
+          <div class="blog-meta" style="margin-bottom:24px;">
+            <span>📅 Abril 2026</span>
+            <span>⏱ 5 min lectura</span>
+            <span>✍️ Equipo Trono</span>
+          </div>
+          <a href="articulo-ejemplo.html" class="btn btn-dorado">Leer artículo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TODOS LOS ARTÍCULOS -->
+  <section class="seccion" style="padding-top:0;">
+    <div class="contenedor">
+      <div class="seccion-titulo animar">
+        <h2>Todos los <span>artículos</span></h2>
+        <div class="separador"></div>
+      </div>
+
+      <!-- Filtros -->
+      <div class="filtros animar" style="margin-top:32px;">
+        <button class="filtro-btn activo">Todos</button>
+        <button class="filtro-btn">🤖 IA & Tech</button>
+        <button class="filtro-btn">🛡️ Ciberseguridad</button>
+        <button class="filtro-btn">🎬 Producción</button>
+        <button class="filtro-btn">💡 Consejos</button>
+      </div>
+
+      <div class="grid-3" style="margin-top:32px;">
+
+        <div class="blog-card animar">
+          <div class="blog-card-img">🛡️</div>
+          <div class="blog-card-body">
+            <span class="blog-etiqueta" style="background:rgba(34,197,94,0.1);color:#4ade80;">Ciberseguridad</span>
+            <h3>5 amenazas cibernéticas que enfrentan las pymes hoy</h3>
+            <p>Conoce los ataques más comunes y cómo proteger tu empresa sin gastar una fortuna.</p>
+            <div class="blog-meta" style="margin-top:auto;">
+              <span>📅 Mar 2026</span>
+              <span>⏱ 4 min</span>
+            </div>
+            <a href="articulo-ejemplo.html" class="card-link" style="margin-top:16px;">Leer más →</a>
+          </div>
+        </div>
+
+        <div class="blog-card animar animar-delay-1">
+          <div class="blog-card-img" style="background:linear-gradient(135deg,#4a1f70,#0a0a0a);">🎬</div>
+          <div class="blog-card-body">
+            <span class="blog-etiqueta">Producción</span>
+            <h3>Por qué tu empresa necesita video marketing en 2026</h3>
+            <p>El contenido en video genera 3 veces más engagement que cualquier otro formato. Te explicamos cómo aprovecharlo.</p>
+            <div class="blog-meta" style="margin-top:auto;">
+              <span>📅 Feb 2026</span>
+              <span>⏱ 3 min</span>
+            </div>
+            <a href="articulo-ejemplo.html" class="card-link" style="margin-top:16px;">Leer más →</a>
+          </div>
+        </div>
+
+        <div class="blog-card animar animar-delay-2">
+          <div class="blog-card-img" style="background:linear-gradient(135deg,#1a3a5c,#0a0a0a);">💡</div>
+          <div class="blog-card-body">
+            <span class="blog-etiqueta" style="background:rgba(251,191,36,0.1);color:#fbbf24;">Consejos</span>
+            <h3>Cómo extender la vida útil de tus equipos de cómputo</h3>
+            <p>Con un mantenimiento adecuado, tus equipos pueden durar el doble. Sigue estos pasos sencillos.</p>
+            <div class="blog-meta" style="margin-top:auto;">
+              <span>📅 Ene 2026</span>
+              <span>⏱ 5 min</span>
+            </div>
+            <a href="articulo-ejemplo.html" class="card-link" style="margin-top:16px;">Leer más →</a>
+          </div>
+        </div>
+
+        <div class="blog-card animar animar-delay-1">
+          <div class="blog-card-img" style="background:linear-gradient(135deg,#2a1a0a,#0a0a0a);">🔲</div>
+          <div class="blog-card-body">
+            <span class="blog-etiqueta" style="background:rgba(201,168,76,0.1);color:var(--dorado);">IA & Tech</span>
+            <h3>Menús digitales QR: la revolución de los restaurantes</h3>
+            <p>Cómo los restaurantes están ahorrando tiempo y mejorando la experiencia del cliente con tecnología QR.</p>
+            <div class="blog-meta" style="margin-top:auto;">
+              <span>📅 Dic 2025</span>
+              <span>⏱ 3 min</span>
+            </div>
+            <a href="articulo-ejemplo.html" class="card-link" style="margin-top:16px;">Leer más →</a>
+          </div>
+        </div>
+
+        <div class="blog-card animar animar-delay-2">
+          <div class="blog-card-img" style="background:linear-gradient(135deg,#1a1a4a,#0a0a0a);">📱</div>
+          <div class="blog-card-body">
+            <span class="blog-etiqueta">Producción</span>
+            <h3>Instagram Reels vs TikTok: ¿dónde debe estar tu marca?</h3>
+            <p>Análisis comparativo de las dos plataformas de video más poderosas del momento. ¿Cuál es mejor para tu negocio?</p>
+            <div class="blog-meta" style="margin-top:auto;">
+              <span>📅 Nov 2025</span>
+              <span>⏱ 6 min</span>
+            </div>
+            <a href="articulo-ejemplo.html" class="card-link" style="margin-top:16px;">Leer más →</a>
+          </div>
+        </div>
+
+        <div class="blog-card animar animar-delay-3">
+          <div class="blog-card-img" style="background:linear-gradient(135deg,#0a2a1a,#0a0a0a);">🔒</div>
+          <div class="blog-card-body">
+            <span class="blog-etiqueta" style="background:rgba(34,197,94,0.1);color:#4ade80;">Ciberseguridad</span>
+            <h3>Contraseñas seguras: la guía definitiva para empresas</h3>
+            <p>El 81% de las brechas de seguridad se deben a contraseñas débiles. Aprende cómo crear una política de contraseñas efectiva.</p>
+            <div class="blog-meta" style="margin-top:auto;">
+              <span>📅 Oct 2025</span>
+              <span>⏱ 4 min</span>
+            </div>
+            <a href="articulo-ejemplo.html" class="card-link" style="margin-top:16px;">Leer más →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="seccion" style="padding-top:0;">
+    <div class="contenedor">
+      <div class="cta-banner animar" style="max-width:700px;margin:0 auto;">
+        <h2>Recibe artículos en tu <span class="texto-dorado">correo</span></h2>
+        <p>Suscríbete para recibir los últimos artículos sobre tecnología, producción y ciberseguridad directamente en tu bandeja de entrada.</p>
+        <form style="display:flex;gap:12px;margin-top:8px;flex-wrap:wrap;justify-content:center;" onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:var(--dorado)\'>✓ ¡Suscrito! Pronto recibirás nuestro contenido.</p>'">
+          <input type="email" placeholder="tu@correo.com" required style="flex:1;min-width:240px;background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.3);border-radius:8px;padding:12px 16px;color:var(--blanco);font-family:var(--fuente-cuerpo);outline:none;" />
+          <button type="submit" class="btn btn-dorado">Suscribirme</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer-grid">
+        <div class="footer-marca">
+          <h3>GRUPO TRONO</h3>
+          <p>Holding tecnológico especializado en producción, hardware, software, ciberseguridad y videojuegos.</p>
+          <div class="footer-social">
+            <a href="#">📷</a><a href="#">📘</a><a href="#">▶️</a><a href="#">💼</a><a href="#">💬</a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Filiales</h4><ul>
+          <li><a href="../servicios/productions.html">Trono Productions</a></li>
+          <li><a href="../servicios/hardware.html">Trono Hardware</a></li>
+          <li><a href="../servicios/software.html">Trono Software</a></li>
+          <li><a href="../servicios/security.html">Trono Security</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Empresa</h4><ul>
+          <li><a href="../nosotros.html">Nosotros</a></li>
+          <li><a href="../portafolio.html">Portafolio</a></li>
+          <li><a href="../videos.html">Videos</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="../contacto.html">Contacto</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Contacto</h4><ul>
+          <li><a href="mailto:contacto@grupotrono.com">contacto@grupotrono.com</a></li>
+          <li><a href="tel:+57000000000">+57 (000) 000-0000</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="anio-actual"></span> Grupo Trono. Todos los derechos reservados.</p>
+        <div class="footer-bottom-links"><a href="#">Privacidad</a><a href="#">Términos</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <!-- WhatsApp Flotante -->
+  <a href="https://wa.me/57000000000?text=Hola%20Grupo%20Trono!%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios."
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    💬
+  </a>
+
+</body>
+</html>
+
+
+
+
+
+

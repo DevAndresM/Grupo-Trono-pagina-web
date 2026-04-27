@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contacta a Grupo Trono — estamos listos para ayudarte con tu proyecto de tecnología, producción o seguridad." />
+  <title>Contacto | Grupo Trono</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/logo-grupo-trono.png" />
+  <meta property="og:site_name" content="Grupo Trono" />
+  <meta property="og:title" content="Contacto | Grupo Trono" />
+  <meta property="og:description" content="Contáctanos para iniciar tu proyecto. Estamos listos para ayudarte." />
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo"><img src="img/logo-grupo-trono-nav.png" alt="Grupo Trono" /></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li class="nav-dropdown">
+        <a href="servicios/productions.html">Servicios ▾</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="servicios/productions.html"><img src="img/crown-productions.png" class="nav-crown" alt=""> Trono Productions</a></li>
+          <li><a href="servicios/hardware.html"><img src="img/crown-hardware.png" class="nav-crown" alt=""> Trono Hardware</a></li>
+          <li><a href="servicios/software.html"><img src="img/crown-software.png" class="nav-crown" alt=""> Trono Software</a></li>
+          <li><a href="servicios/security.html"><img src="img/crown-security.png" class="nav-crown" alt=""> Trono Security</a></li>
+          <li><a href="servicios/games.html"><img src="img/crown-games.png" class="nav-crown" alt=""> Trono Games</a></li>
+          <li><a href="#" class="nav-soon"><img src="img/crown-gt.png" class="nav-crown" alt=""> Trono Net <span class="nav-badge-soon">Pronto</span></a></li>
+          <li><a href="#" class="nav-soon"><img src="img/crown-gt.png" class="nav-crown" alt=""> Trono Energy <span class="nav-badge-soon">Pronto</span></a></li>
+        </ul>
+      </li>
+      <li><a href="portafolio.html">Portafolio</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="blog/index.html">Blog</a></li>
+      <li><a href="contacto.html" class="nav-cta activo">Contacto</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="contenedor">
+      <div class="breadcrumb">
+        <a href="index.html">Inicio</a><span>/</span><span>Contacto</span>
+      </div>
+      <h1>Hablemos de tu <span class="texto-dorado">proyecto</span></h1>
+      <p>Cuéntanos qué necesitas. Nuestro equipo te responderá en menos de 24 horas con una propuesta a tu medida.</p>
+    </div>
+  </section>
+
+  <!-- CONTACTO PRINCIPAL -->
+  <section class="seccion">
+    <div class="contenedor">
+      <div class="grid-2" style="gap:64px;align-items:start;">
+
+        <!-- FORMULARIO -->
+        <div class="animar">
+          <h2 style="margin-bottom:8px;">Envíanos un <span class="texto-dorado">mensaje</span></h2>
+          <p style="margin-bottom:32px;">Completa el formulario y uno de nuestros especialistas se pondrá en contacto contigo.</p>
+
+          <!--
+            Para activar el formulario:
+            1. Ve a formspree.io y crea una cuenta gratuita
+            2. Crea un nuevo formulario y copia el endpoint
+            3. Reemplaza "https://formspree.io/f/TU_ID" con tu endpoint real
+          -->
+          <form
+            id="form-contacto"
+            action="https://formspree.io/f/TU_ID_AQUI"
+            method="POST"
+          >
+            <div class="form-grid">
+              <div class="form-grupo">
+                <label for="nombre">Nombre completo *</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" required />
+              </div>
+              <div class="form-grupo">
+                <label for="email">Correo electrónico *</label>
+                <input type="email" id="email" name="email" placeholder="juan@empresa.com" required />
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-grupo">
+                <label for="telefono">Teléfono / WhatsApp</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000" />
+              </div>
+              <div class="form-grupo">
+                <label for="empresa">Empresa / Organización</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Mi empresa S.A.S." />
+              </div>
+            </div>
+
+            <div class="form-grupo">
+              <label for="servicio">¿Qué servicio te interesa? *</label>
+              <select id="servicio" name="servicio" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <optgroup label="Trono Productions">
+                  <option value="social-media">Social Media Management</option>
+                  <option value="video-produccion">Producción de video</option>
+                  <option value="videoclip">Videoclip para artista</option>
+                  <option value="audio">Grabación de audio</option>
+                  <option value="marketing">Marketing digital</option>
+                </optgroup>
+                <optgroup label="Trono Hardware">
+                  <option value="reparacion">Reparación de equipos</option>
+                  <option value="mantenimiento">Mantenimiento preventivo</option>
+                </optgroup>
+                <optgroup label="Trono Software">
+                  <option value="web">Desarrollo web</option>
+                  <option value="ia">Inteligencia Artificial</option>
+                  <option value="app">Aplicación móvil</option>
+                  <option value="qr">Código QR / Menú digital</option>
+                </optgroup>
+                <optgroup label="Trono Security">
+                  <option value="cctv">Instalación de cámaras CCTV</option>
+                  <option value="ciberseguridad">Ciberseguridad empresarial</option>
+                  <option value="auditoria">Auditoría de seguridad</option>
+                  <option value="capacitacion">Capacitación en ciberseguridad</option>
+                </optgroup>
+                <option value="otro">Otro / No estoy seguro</option>
+              </select>
+            </div>
+
+            <div class="form-grupo">
+              <label for="mensaje">Cuéntanos sobre tu proyecto *</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Describe tu proyecto, necesidades, presupuesto aproximado o cualquier detalle que consideres importante..." required></textarea>
+            </div>
+
+            <div class="form-grupo" style="display:flex;align-items:flex-start;gap:12px;">
+              <input type="checkbox" id="privacidad" required style="width:auto;margin-top:3px;accent-color:var(--dorado);" />
+              <label for="privacidad" style="font-size:0.85rem;cursor:pointer;">
+                Acepto la <a href="#" style="color:var(--dorado);">política de privacidad</a> y autorizo el tratamiento de mis datos personales.
+              </label>
+            </div>
+
+            <div id="form-resultado"></div>
+
+            <button type="submit" class="btn btn-dorado" style="width:100%;justify-content:center;font-size:1rem;padding:14px;">
+              Enviar mensaje
+            </button>
+          </form>
+        </div>
+
+        <!-- INFO DE CONTACTO -->
+        <div>
+          <div class="animar">
+            <h2 style="margin-bottom:32px;">Información de <span class="texto-dorado">contacto</span></h2>
+
+            <div style="display:flex;flex-direction:column;gap:20px;margin-bottom:40px;">
+              <div class="card" style="display:flex;align-items:center;gap:20px;padding:20px;">
+                <div style="width:48px;height:48px;background:rgba(201,168,76,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">📧</div>
+                <div>
+                  <div style="font-size:0.8rem;color:var(--gris);margin-bottom:4px;">Correo electrónico</div>
+                  <a href="mailto:contacto@grupotrono.com" style="color:var(--blanco);font-weight:500;">contacto@grupotrono.com</a>
+                </div>
+              </div>
+
+              <div class="card" style="display:flex;align-items:center;gap:20px;padding:20px;">
+                <div style="width:48px;height:48px;background:rgba(107,47,160,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">📞</div>
+                <div>
+                  <div style="font-size:0.8rem;color:var(--gris);margin-bottom:4px;">Teléfono / WhatsApp</div>
+                  <a href="tel:+57000000000" style="color:var(--blanco);font-weight:500;">+57 (000) 000-0000</a>
+                </div>
+              </div>
+
+              <div class="card" style="display:flex;align-items:center;gap:20px;padding:20px;">
+                <div style="width:48px;height:48px;background:rgba(201,168,76,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">📍</div>
+                <div>
+                  <div style="font-size:0.8rem;color:var(--gris);margin-bottom:4px;">Ubicación</div>
+                  <span style="color:var(--blanco);font-weight:500;">Colombia</span>
+                </div>
+              </div>
+
+              <div class="card" style="display:flex;align-items:center;gap:20px;padding:20px;">
+                <div style="width:48px;height:48px;background:rgba(107,47,160,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">⏰</div>
+                <div>
+                  <div style="font-size:0.8rem;color:var(--gris);margin-bottom:4px;">Horario de atención</div>
+                  <span style="color:var(--blanco);font-weight:500;">Lun – Sáb: 8:00 am – 6:00 pm</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Redes sociales -->
+          <div class="animar animar-delay-2">
+            <h3 style="margin-bottom:20px;">Síguenos en <span class="texto-dorado">redes</span></h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+              <a href="#" class="card" style="display:flex;align-items:center;gap:12px;padding:16px;text-decoration:none;">
+                <span style="font-size:1.4rem;">📷</span>
+                <div>
+                  <div style="font-size:0.8rem;color:var(--gris);">Instagram</div>
+                  <div style="font-size:0.88rem;color:var(--blanco);">@grupotrono</div>
+                </div>
+              </a>
+              <a href="#" class="card" style="display:flex;align-items:center;gap:12px;padding:16px;text-decoration:none;">
+                <span style="font-size:1.4rem;">▶️</span>
+                <div>
+                  <div style="font-size:0.8rem;color:var(--gris);">YouTube</div>
+                  <div style="font-size:0.88rem;color:var(--blanco);">Grupo Trono</div>
+                </div>
+              </a>
+              <a href="#" class="card" style="display:flex;align-items:center;gap:12px;padding:16px;text-decoration:none;">
+                <span style="font-size:1.4rem;">📘</span>
+                <div>
+                  <div style="font-size:0.8rem;color:var(--gris);">Facebook</div>
+                  <div style="font-size:0.88rem;color:var(--blanco);">Grupo Trono</div>
+                </div>
+              </a>
+              <a href="#" class="card" style="display:flex;align-items:center;gap:12px;padding:16px;text-decoration:none;">
+                <span style="font-size:1.4rem;">💬</span>
+                <div>
+                  <div style="font-size:0.8rem;color:var(--gris);">WhatsApp</div>
+                  <div style="font-size:0.88rem;color:var(--blanco);">Escríbenos ya</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Tiempo de respuesta -->
+          <div class="card animar animar-delay-3" style="margin-top:24px;text-align:center;background:linear-gradient(135deg,rgba(201,168,76,0.05),rgba(107,47,160,0.05));border-color:rgba(201,168,76,0.2);">
+            <div style="font-size:2rem;margin-bottom:8px;">⚡</div>
+            <h4 class="texto-dorado" style="margin-bottom:8px;">Respuesta en menos de 24h</h4>
+            <p style="font-size:0.85rem;">Nos comprometemos a revisar tu mensaje y responderte con una propuesta el mismo día hábil.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="seccion" style="padding-top:0;">
+    <div class="contenedor">
+      <div class="seccion-titulo animar">
+        <h2>Preguntas <span>frecuentes</span></h2>
+        <div class="separador"></div>
+      </div>
+
+      <div style="max-width:700px;margin:48px auto 0;display:flex;flex-direction:column;gap:16px;">
+
+        <div class="card animar" style="cursor:pointer;" onclick="this.querySelector('.faq-resp').style.display = this.querySelector('.faq-resp').style.display === 'none' ? 'block' : 'none'">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <h4>¿Cuánto cuesta un proyecto?</h4>
+            <span class="texto-dorado">+</span>
+          </div>
+          <p class="faq-resp" style="display:none;margin-top:12px;font-size:0.9rem;">
+            Cada proyecto es diferente. Trabajamos con presupuestos adaptados al tamaño y necesidades de cada cliente. Contáctanos con los detalles de tu proyecto y te enviamos una propuesta sin compromiso.
+          </p>
+        </div>
+
+        <div class="card animar animar-delay-1" style="cursor:pointer;" onclick="this.querySelector('.faq-resp').style.display = this.querySelector('.faq-resp').style.display === 'none' ? 'block' : 'none'">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <h4>¿Trabajan con empresas de todos los tamaños?</h4>
+            <span class="texto-dorado">+</span>
+          </div>
+          <p class="faq-resp" style="display:none;margin-top:12px;font-size:0.9rem;">
+            Sí. Atendemos desde emprendedores individuales hasta empresas con más de 500 empleados. Nuestros servicios se adaptan al tamaño y madurez tecnológica de cada cliente.
+          </p>
+        </div>
+
+        <div class="card animar animar-delay-2" style="cursor:pointer;" onclick="this.querySelector('.faq-resp').style.display = this.querySelector('.faq-resp').style.display === 'none' ? 'block' : 'none'">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <h4>¿Ofrecen garantía en sus servicios?</h4>
+            <span class="texto-dorado">+</span>
+          </div>
+          <p class="faq-resp" style="display:none;margin-top:12px;font-size:0.9rem;">
+            Sí. Todas nuestras reparaciones de hardware tienen garantía. Los proyectos de software incluyen un período de soporte post-entrega. Los detalles se especifican en cada propuesta.
+          </p>
+        </div>
+
+        <div class="card animar animar-delay-3" style="cursor:pointer;" onclick="this.querySelector('.faq-resp').style.display = this.querySelector('.faq-resp').style.display === 'none' ? 'block' : 'none'">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <h4>¿Pueden ir a mi empresa?</h4>
+            <span class="texto-dorado">+</span>
+          </div>
+          <p class="faq-resp" style="display:none;margin-top:12px;font-size:0.9rem;">
+            Sí, ofrecemos servicio técnico a domicilio para reparación y mantenimiento de hardware, instalación de CCTV y capacitaciones. Consulta disponibilidad según tu ubicación.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer-grid">
+        <div class="footer-marca">
+          <h3>GRUPO TRONO</h3>
+          <p>Holding tecnológico especializado en producción, hardware, software, ciberseguridad y videojuegos.</p>
+          <div class="footer-social">
+            <a href="#">📷</a><a href="#">📘</a><a href="#">▶️</a><a href="#">💼</a><a href="#">💬</a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Filiales</h4><ul>
+          <li><a href="servicios/productions.html">Trono Productions</a></li>
+          <li><a href="servicios/hardware.html">Trono Hardware</a></li>
+          <li><a href="servicios/software.html">Trono Software</a></li>
+          <li><a href="servicios/security.html">Trono Security</a></li>
+          <li><a href="servicios/games.html">Trono Games</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Empresa</h4><ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="portafolio.html">Portafolio</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Contacto</h4><ul>
+          <li><a href="mailto:contacto@grupotrono.com">contacto@grupotrono.com</a></li>
+          <li><a href="tel:+57000000000">+57 (000) 000-0000</a></li>
+          <li><a href="#">Colombia</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="anio-actual"></span> Grupo Trono. Todos los derechos reservados.</p>
+        <div class="footer-bottom-links"><a href="#">Privacidad</a><a href="#">Términos</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <!-- WhatsApp Flotante -->
+  <a href="https://wa.me/57000000000?text=Hola%20Grupo%20Trono!%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios."
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    💬
+  </a>
+
+</body>
+</html>
+
+
+
+
+
+
