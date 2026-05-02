@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css?v=3" />
   <link rel="icon" type="image/png" href="img/favicon.png" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="img/logo-grupo-trono.png" />
@@ -79,6 +79,34 @@
     </div>
 
     <div class="hero-scroll">Scroll</div>
+  </section>
+
+  <!-- ===== CLIENTES ===== -->
+  <section class="seccion clientes-seccion">
+    <div class="contenedor">
+      <div class="seccion-titulo animar">
+        <h2>Nuestros <span>clientes</span></h2>
+        <div class="separador"></div>
+      </div>
+      <div class="clientes-carrusel" id="clientesCarrusel">
+        <div class="clientes-track" id="clientesTrack">
+          <div class="cliente-item" data-index="0"><img src="img/clientes/aon.png" alt="AON" /></div>
+          <div class="cliente-item" data-index="1"><img src="img/clientes/embajada-eeuu.png" alt="Embajada de EE.UU." /></div>
+          <div class="cliente-item" data-index="2"><img src="img/clientes/embajada-corea.png" alt="Embajada de Corea del Sur" /></div>
+          <div class="cliente-item" data-index="3"><img src="img/clientes/toyota.png" alt="Toyota" /></div>
+          <div class="cliente-item" data-index="4"><img src="img/clientes/lilipink.png" alt="Lilipink" /></div>
+          <div class="cliente-item" data-index="5"><img src="img/clientes/brick-abogados.png" alt="Brick Abogados" /></div>
+        </div>
+      </div>
+      <div class="clientes-dots" id="clientesDots">
+        <span class="cliente-dot activo" data-i="0"></span>
+        <span class="cliente-dot" data-i="1"></span>
+        <span class="cliente-dot" data-i="2"></span>
+        <span class="cliente-dot" data-i="3"></span>
+        <span class="cliente-dot" data-i="4"></span>
+        <span class="cliente-dot" data-i="5"></span>
+      </div>
+    </div>
   </section>
 
   <!-- ===== FILIALES ===== -->
@@ -377,7 +405,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=3"></script>
   <!-- WhatsApp Flotante -->
   <a href="https://wa.me/57000000000?text=Hola%20Grupo%20Trono!%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios."
      class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">

@@ -167,4 +167,91 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('anio-actual');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---------- Carrusel Clientes ---------- */
+  const track   = document.getElementById('clientesTrack');
+  const dotsEl  = document.getElementById('clientesDots');
+  if (track) {
+    const items   = Array.from(track.querySelectorAll('.cliente-item'));
+    const dots    = dotsEl ? Array.from(dotsEl.querySelectorAll('.cliente-dot')) : [];
+    const total   = items.length;
+    let current   = 0;
+    let timer     = null;
+
+    function renderCarrusel(idx) {
+      items.forEach((item, i) => {
+        item.classList.remove('estado-centro', 'estado-lateral', 'estado-oculto');
+        const prev = (idx - 1 + total) % total;
+        const next = (idx + 1) % total;
+        if (i === idx)  item.classList.add('estado-centro');
+        else if (i === prev || i === next) item.classList.add('estado-lateral');
+        else item.classList.add('estado-oculto');
+      });
+      dots.forEach((d, i) => d.classList.toggle('activo', i === idx));
+    }
+
+    function avanzar() {
+      current = (current + 1) % total;
+      renderCarrusel(current);
+    }
+
+    function startTimer() {
+      clearInterval(timer);
+      timer = setInterval(avanzar, 3000);
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        current = parseInt(dot.dataset.i);
+        renderCarrusel(current);
+        startTimer();
+      });
+    });
+
+    // Soporte swipe táctil
+    let touchStartX = 0;
+    track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) {
+        current = diff > 0 ? (current + 1) % total : (current - 1 + total) % total;
+        renderCarrusel(current);
+        startTimer();
+      }
+    });
+
+    // Soporte arrastre con mouse
+    let mouseStartX = 0;
+    let arrastrando  = false;
+    track.addEventListener('mousedown', e => {
+      arrastrando  = true;
+      mouseStartX  = e.clientX;
+      track.style.cursor = 'grabbing';
+      e.preventDefault();
+    });
+    window.addEventListener('mousemove', e => {
+      if (!arrastrando) return;
+      e.preventDefault();
+    });
+    window.addEventListener('mouseup', e => {
+      if (!arrastrando) return;
+      arrastrando = false;
+      track.style.cursor = 'grab';
+      const diff = mouseStartX - e.clientX;
+      if (Math.abs(diff) > 40) {
+        current = diff > 0 ? (current + 1) % total : (current - 1 + total) % total;
+        renderCarrusel(current);
+        startTimer();
+      }
+    });
+    track.addEventListener('mouseleave', () => {
+      if (arrastrando) {
+        arrastrando = false;
+        track.style.cursor = 'grab';
+      }
+    });
+
+    renderCarrusel(current);
+    startTimer();
+  }
+
 });

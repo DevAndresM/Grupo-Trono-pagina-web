@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "grupo-trono-web",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "3900", "--directory", "C:\\Users\\andre\\OneDrive\\Documentos\\Grupo Trono\\Trono Software\\Proyectos\\Pagina WEB grupo trono v2"],
+      "port": 3900
+    }
+  ]
+}
