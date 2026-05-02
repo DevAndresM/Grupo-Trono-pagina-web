@@ -1335,63 +1335,70 @@ p { color: var(--gris-claro); }
   overflow: hidden;
   width: 100%;
   margin: 40px auto 0;
-  max-width: 800px;
+  max-width: 860px;
+  height: 140px;
 }
 
 .clientes-track {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  transition: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
   cursor: grab;
   user-select: none;
 }
 
+/* Todos los ítems posicionados absolutamente desde el centro */
 .cliente-item {
-  flex: 0 0 33.333%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 33.333%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 28px;
-  transition: filter 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+  padding: 16px 24px;
+  transition: left 0.45s ease, opacity 0.45s ease,
+              transform 0.45s ease, filter 0.45s ease;
 }
 
 .cliente-item img {
-  max-height: 70px;
+  max-height: 72px;
   max-width: 160px;
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  opacity: 1;
+  pointer-events: none;
+  /* colores originales — sin filtro blanco/negro */
 }
 
-/* Estado: lateral (difuminado) */
+/* Estado: lateral (difuminado, a los lados) */
 .cliente-item.estado-lateral {
-  filter: blur(3px);
-  opacity: 0.3;
-  transform: scale(0.85);
+  filter: blur(4px);
+  opacity: 0.28;
+  transform: translate(-50%, -50%) scale(0.82);
 }
 
-/* Estado: centro (nítido) */
+/* Estado: centro (nítido, enfocado) */
 .cliente-item.estado-centro {
-  filter: blur(0px);
+  filter: none;
   opacity: 1;
-  transform: scale(1.1);
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* Estado: oculto */
+/* Estado: oculto (sin espacio, invisible) */
 .cliente-item.estado-oculto {
   opacity: 0;
   pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.6);
+  transition: none;
 }
 
 .clientes-dots {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-top: 24px;
+  margin-top: 28px;
 }
 
 .cliente-dot {
@@ -1409,6 +1416,6 @@ p { color: var(--gris-claro); }
 }
 
 @media (max-width: 600px) {
-  .cliente-item { flex: 0 0 50%; }
-  .cliente-item img { max-height: 50px; max-width: 120px; }
+  .clientes-carrusel { height: 110px; }
+  .cliente-item img { max-height: 50px; max-width: 110px; }
 }

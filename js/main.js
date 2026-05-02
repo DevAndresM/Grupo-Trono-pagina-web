@@ -178,13 +178,23 @@ document.addEventListener('DOMContentLoaded', () => {
     let timer     = null;
 
     function renderCarrusel(idx) {
+      const prev = (idx - 1 + total) % total;
+      const next = (idx + 1) % total;
       items.forEach((item, i) => {
         item.classList.remove('estado-centro', 'estado-lateral', 'estado-oculto');
-        const prev = (idx - 1 + total) % total;
-        const next = (idx + 1) % total;
-        if (i === idx)  item.classList.add('estado-centro');
-        else if (i === prev || i === next) item.classList.add('estado-lateral');
-        else item.classList.add('estado-oculto');
+        if (i === idx) {
+          item.classList.add('estado-centro');
+          item.style.left = '50%';
+        } else if (i === prev) {
+          item.classList.add('estado-lateral');
+          item.style.left = '16.667%';
+        } else if (i === next) {
+          item.classList.add('estado-lateral');
+          item.style.left = '83.333%';
+        } else {
+          item.classList.add('estado-oculto');
+          item.style.left = '50%';   // ocultos van al centro sin transición
+        }
       });
       dots.forEach((d, i) => d.classList.toggle('activo', i === idx));
     }
