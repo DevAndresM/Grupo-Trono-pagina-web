@@ -163,6 +163,12 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => { el.className = 'form-mensaje'; }, 6000);
   }
 
+  /* ---------- Protección fotos de equipo ---------- */
+  document.querySelectorAll('.equipo-foto').forEach(img => {
+    img.addEventListener('contextmenu', e => e.preventDefault());
+    img.addEventListener('dragstart',   e => e.preventDefault());
+  });
+
   /* ---------- Año actual en footer ---------- */
   const yearEl = document.getElementById('anio-actual');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

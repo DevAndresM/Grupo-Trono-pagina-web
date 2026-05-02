@@ -1281,6 +1281,21 @@ p { color: var(--gris-claro); }
   transform: translateZ(0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;   /* el overlay captura los eventos */
+}
+
+/* Overlay transparente sobre la foto — bloquea arrastre y menú contextual */
+.equipo-avatar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  z-index: 2;
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
 }
 .equipo-avatar-placeholder {
   position: absolute;
