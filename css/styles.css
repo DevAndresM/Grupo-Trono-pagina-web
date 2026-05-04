@@ -1146,6 +1146,8 @@ p { color: var(--gris-claro); }
   .form-grid { grid-template-columns: 1fr; }
   .hero-botones { flex-direction: column; align-items: flex-start; }
   .hero-dos-columnas { grid-template-columns: 1fr; gap: 32px; }
+  .hero { padding-bottom: 96px; }          /* espacio para el indicador scroll */
+  .hero-scroll { bottom: 24px; }
   .hero-logo-derecha { order: -1; }
   .hero-logo-derecha img { max-width: 280px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
