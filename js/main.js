@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------- Marcar enlace activo ---------- */
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
   document.querySelectorAll('.nav-links a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && (href === currentPath || href.endsWith(currentPath))) {
+    const href = (link.getAttribute('href') || '').replace(/\/+$/, '') || '/';
+    if (href === currentPath) {
       link.classList.add('activo');
     }
   });
