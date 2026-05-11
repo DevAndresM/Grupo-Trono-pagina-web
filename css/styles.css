@@ -663,10 +663,31 @@ p { color: var(--gris-claro); }
   transition: var(--transicion);
 }
 
+.footer-social a img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
 .footer-social a:hover {
   background: rgba(201,168,76,0.1);
   border-color: var(--dorado);
-  color: var(--dorado);
+}
+
+.footer-social a:hover img {
+  filter: brightness(0) saturate(100%) invert(78%) sepia(55%) saturate(400%) hue-rotate(5deg) brightness(95%);
+}
+
+/* ── Protección global de imágenes ─────────────────────────── */
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .footer-col h4 {

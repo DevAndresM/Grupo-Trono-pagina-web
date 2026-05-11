@@ -163,10 +163,11 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => { el.className = 'form-mensaje'; }, 6000);
   }
 
-  /* ---------- Protección fotos de equipo ---------- */
-  document.querySelectorAll('.equipo-foto').forEach(img => {
+  /* ---------- Protección global de imágenes ---------- */
+  document.querySelectorAll('img').forEach(img => {
     img.addEventListener('contextmenu', e => e.preventDefault());
     img.addEventListener('dragstart',   e => e.preventDefault());
+    img.setAttribute('draggable', 'false');
   });
 
   /* ---------- Año actual en footer ---------- */
