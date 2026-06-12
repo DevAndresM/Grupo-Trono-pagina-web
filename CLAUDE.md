@@ -187,11 +187,11 @@ Estos valores son **placeholders** que el usuario debe reemplazar registrándose
 ## Lo que falta ⏳
 
 ### Alta prioridad
-- [ ] **Push a GitHub** — 2 commits locales no publicados (`ed88c71`, `6fdb2e1`)
+- [x] **Push a GitHub** — subido
+- [x] **Número de WhatsApp real** — reemplazado en los 12 HTML
+- [x] **Formspree** — endpoint real configurado en `contacto/index.html`
+- [x] **URLs de redes sociales** — reemplazadas en footers de todos los HTML
 - [ ] **Google Search Console** — verificación + envío de sitemap (acción manual usuario)
-- [ ] **Número de WhatsApp real** — reemplazar `57000000000` en los 12 HTML
-- [ ] **Formspree** — registrarse y poner endpoint real en `contacto/index.html`
-- [ ] **URLs de redes sociales** — reemplazar `href="#"` en footers de todos los HTML
 
 ### Media prioridad
 - [ ] **og:image con URL absoluta** en páginas internas — actualmente usa `/img/logo-grupo-trono.png` (relativa), Facebook/LinkedIn no la leerán correctamente. Debe ser `https://www.grupotrono.com/img/logo-grupo-trono.png`
