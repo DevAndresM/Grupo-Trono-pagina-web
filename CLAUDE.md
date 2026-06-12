@@ -191,7 +191,7 @@ Estos valores son **placeholders** que el usuario debe reemplazar registrándose
 - [x] **Número de WhatsApp real** — reemplazado en los 12 HTML
 - [x] **Formspree** — endpoint real configurado en `contacto/index.html`
 - [x] **URLs de redes sociales** — reemplazadas en footers de todos los HTML
-- [ ] **Google Search Console** — verificación + envío de sitemap (acción manual usuario)
+- [x] **Google Search Console** — verificación + envío de sitemap + indexación solicitada para las 11 páginas internas (2026-06-11)
 
 ### Media prioridad
 - [ ] **og:image con URL absoluta** en páginas internas — actualmente usa `/img/logo-grupo-trono.png` (relativa), Facebook/LinkedIn no la leerán correctamente. Debe ser `https://www.grupotrono.com/img/logo-grupo-trono.png`
@@ -202,7 +202,7 @@ Estos valores son **placeholders** que el usuario debe reemplazar registrándose
 
 ### Baja prioridad / futuro
 - [ ] **Newsletter/suscripción** — integrar Brevo o Mailchimp en sección de blog
-- [ ] **Google Analytics** — agregar GA4 para métricas de tráfico
+- [x] **Google Analytics GA4** — ID `G-H5ZJLZ0YP8` instalado en los 12 HTML (2026-06-11). Pendiente: push a GitHub para activar en producción.
 - [ ] **Página de videos** — actualmente tiene video de Rick Astley como demo
 - [ ] **Portafolio real** — poblar con proyectos reales de Grupo Trono
 - [ ] **Favicon optimizado** — 32x32 y 192x192 versiones + `apple-touch-icon`
