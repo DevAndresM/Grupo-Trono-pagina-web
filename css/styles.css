@@ -1457,3 +1457,13 @@ img {
   .clientes-carrusel { height: 110px; }
   .cliente-item img { max-height: 50px; max-width: 110px; }
 }
+
+/* ===== Páginas legales ===== */
+.legal-doc { line-height: 1.7; }
+.legal-doc h2 { font-size: 1.25rem; margin: 36px 0 12px; }
+.legal-doc h2:first-of-type { margin-top: 16px; }
+.legal-doc p { color: var(--blanco); margin-bottom: 14px; }
+.legal-doc ul { margin: 0 0 18px; padding-left: 22px; }
+.legal-doc li { color: var(--blanco); margin-bottom: 8px; }
+.legal-doc a { color: var(--dorado); }
+.legal-doc strong { color: var(--blanco); }

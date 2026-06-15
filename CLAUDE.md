@@ -42,6 +42,8 @@ Propósito: presencia de marca, captación de clientes, SEO orgánico en Colombi
 ├── videos/index.html                   # Galería de videos
 ├── blog/index.html                     # Listado de blog
 ├── blog/articulo-ejemplo/index.html    # Artículo de blog
+├── privacidad/index.html               # Política de Privacidad (Habeas Data)
+├── terminos/index.html                 # Términos de Uso
 ├── servicios/
 │   ├── productions/index.html
 │   ├── hardware/index.html
@@ -144,19 +146,19 @@ Se usa `window.location.pathname` (no `window.location.href`) para detectar la p
 
 ## Integraciones — Estado de placeholders
 
-Estos valores son **placeholders** que el usuario debe reemplazar registrándose en cada servicio:
+Estado real de las integraciones (verificado en código, 2026-06-15):
 
-| Placeholder | Archivo(s) | Servicio | Acción |
-|-------------|-----------|----------|--------|
-| `57000000000` | 12 archivos HTML (24 ocurrencias) | Número WhatsApp Business | Reemplazar con número real de WhatsApp Business |
-| `https://formspree.io/f/TU_ID_AQUI` | `contacto/index.html` | Formspree | Registrarse en formspree.io → crear form → copiar endpoint |
-| `href="#"` en redes sociales footer | Todos los HTML | Redes sociales | Reemplazar con URLs reales de perfiles |
-| `href="#"` en Privacidad/Términos footer | Todos los HTML | — | Crear páginas o links externos |
+| Integración | Archivo(s) | Estado |
+|-------------|-----------|--------|
+| **Número WhatsApp / teléfono** | 12 archivos HTML | ✅ `573161366932` propagado en TODAS las páginas (botón flotante, footer, `tel:`). Texto visible: `+57 316 136 6932` |
+| **Formspree** | `contacto/index.html` | ✅ Conectado — endpoint real `https://formspree.io/f/maqkzndy` |
+| **Páginas legales** | `privacidad/`, `terminos/` | ✅ Creadas (Habeas Data) y enlazadas en footers + checkbox del form |
+| **URLs redes sociales** | Todos los HTML (footers) | ⏳ PENDIENTE — siguen en `href="#"`. **El usuario aún NO ha creado las redes sociales** (Instagram, Facebook, YouTube, LinkedIn, TikTok). Las creará y pasará las URLs después para reemplazar los `href="#"` de una sola vez |
 
 ### Registro requerido (por el usuario, no Claude)
-- **Formspree** (formspree.io) — formulario de contacto funcional, plan gratuito disponible
-- **WhatsApp Business** — activar número real, vincular a la cuenta de WhatsApp Business API o usar wa.me simple
-- Perfiles sociales: Instagram, Facebook, YouTube, LinkedIn, TikTok — reemplazar `href="#"` una vez creados/verificados
+- ✅ **Formspree** — cuenta creada, endpoint `maqkzndy` ya conectado
+- ✅ **WhatsApp** — número real `573161366932` en todo el sitio
+- ⏳ **Perfiles sociales** — Instagram, Facebook, YouTube, LinkedIn, TikTok: NO creados aún. Pendiente que el usuario los cree y pase las URLs para reemplazar `href="#"` en los footers
 
 ---
 
@@ -191,23 +193,41 @@ Estos valores son **placeholders** que el usuario debe reemplazar registrándose
 - [x] **Número de WhatsApp real** — reemplazado en los 12 HTML
 - [x] **Formspree** — endpoint real configurado en `contacto/index.html`
 - [x] **URLs de redes sociales** — reemplazadas en footers de todos los HTML
-- [x] **Google Search Console** — verificación + envío de sitemap + indexación solicitada para las 11 páginas internas (2026-06-11)
+- [x] **Google Search Console** — verificación + envío de sitemap + indexación solicitada para las 11 páginas internas (2026-06-11). Avisos GSC (2026-06-15): (1) "Página con redirección" = `http://grupotrono.com/` y `http://www.grupotrono.com/` — son las versiones HTTP que redirigen a HTTPS, comportamiento normal de GitHub Pages; validación iniciada en GSC. (2) "Página alternativa con etiqueta canónica" = `?s={search_term_string}` del SearchAction (ya eliminado del Schema.org); validación iniciada el 11/6. Ambas se resolverán solas en días.
 
 ### Media prioridad
-- [ ] **og:image con URL absoluta** en páginas internas — actualmente usa `/img/logo-grupo-trono.png` (relativa), Facebook/LinkedIn no la leerán correctamente. Debe ser `https://www.grupotrono.com/img/logo-grupo-trono.png`
+- [x] **og:image con URL absoluta** — verificado (2026-06-12): todos los 12 HTML ya tienen `https://www.grupotrono.com/img/logo-grupo-trono.png`
+- [x] **Número WhatsApp real** — `573161366932` propagado a las 12 páginas (2026-06-15). Antes solo estaba en `index.html`
+- [x] **Formspree conectado** — endpoint `https://formspree.io/f/maqkzndy` en `contacto/index.html` (2026-06-15)
+- [x] **Política de privacidad y Términos** — creadas en `privacidad/` y `terminos/` (Ley 1581/2012 + Decreto 1377/2013), enlazadas en footers + checkbox del form (2026-06-15)
+- [ ] **URLs redes sociales** — ⏳ usuario aún no crea las redes; pendiente reemplazar `href="#"` en footers cuando pase las URLs
 - [ ] **Logos Trono Net y Trono Energy** — placeholders en navbar marcados como "Pronto", esperando diseñador
 - [ ] **Fotos reales de portafolio** — actualmente usa placeholders de imagen
 - [ ] **Artículos de blog reales** — `blog/articulo-ejemplo/` es un demo
-- [ ] **Política de privacidad y Términos** — páginas legales requeridas por ley colombiana (Habeas Data)
 
 ### Baja prioridad / futuro
 - [ ] **Newsletter/suscripción** — integrar Brevo o Mailchimp en sección de blog
-- [x] **Google Analytics GA4** — ID `G-H5ZJLZ0YP8` instalado en los 12 HTML (2026-06-11). Pendiente: push a GitHub para activar en producción.
+- [x] **Google Analytics GA4** — ID `G-H5ZJLZ0YP8` instalado en los 12 HTML (2026-06-11). Administradores: mmgamingdev@gmail.com + grupotrono@gmail.com (2026-06-12).
+- [x] **Google Ads** — Cuenta #217-744-3743 creada (mmgamingdev@gmail.com). Campaña "Máximo rendimiento" configurada (2026-06-12): 3 títulos, 1 título largo, 2 descripciones, 20 imágenes, 2 logos, 20 temas de búsqueda, Colombia, Español, presupuesto COP20,000/día, estrategia Conversiones. Optimization score: 87.7%. **PENDIENTE LANZAR**: clic en "Enviar" en paso de pago (cargará COP50,000 en Mastercard •••• 2310 + gasto diario de COP20,000). Oferta activa: invierte USD350 → recibe USD350 en crédito (válida hasta 11 ago 2026). **Pendiente post-lanzamiento**: agregar grupotrono@gmail.com como admin (bloqueado hasta completar billing).
 - [ ] **Página de videos** — actualmente tiene video de Rick Astley como demo
 - [ ] **Portafolio real** — poblar con proyectos reales de Grupo Trono
 - [ ] **Favicon optimizado** — 32x32 y 192x192 versiones + `apple-touch-icon`
 
 ---
+
+## Despliegue / Hosting (GitHub Pages)
+
+**El hosting es GitHub Pages (gratuito).** El sitio se publica automáticamente al hacer push a la rama `main` del repo `https://github.com/DevAndresM/Grupo-Trono-pagina-web`. El dominio `www.grupotrono.com` apunta ahí vía `CNAME`.
+
+### Flujo de publicación (lo usa Andres)
+1. Guardar los cambios en archivos (lo hace Claude Code).
+2. **Commit + push con GitHub Desktop** (autenticación PAT vía Windows Credential Manager — NO meter tokens en el chat).
+3. GitHub Pages reconstruye y publica en 1–2 min. Verificar en `https://www.grupotrono.com`.
+
+> **Regla:** Claude edita archivos localmente; **Andres hace el commit/push manual desde GitHub Desktop**. Claude solo debe confirmar explícitamente cuándo los cambios están listos para commitear (todos los archivos guardados y verificados).
+
+### Estado actual para push
+✅ **Listo para commit/push** (2026-06-15): WhatsApp propagado, Formspree conectado, páginas legales creadas y enlazadas, CSS `.legal-doc` añadido. Todo verificado sirviendo local con `python -m http.server` (200 OK en `/privacidad/`, `/terminos/`, `/contacto/`).
 
 ## Comandos frecuentes
 
