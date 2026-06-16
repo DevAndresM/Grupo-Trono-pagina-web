@@ -1467,3 +1467,11 @@ img {
 .legal-doc li { color: var(--blanco); margin-bottom: 8px; }
 .legal-doc a { color: var(--dorado); }
 .legal-doc strong { color: var(--blanco); }
+
+/* ===== Emoji de filiales sin cuadro de fondo ===== */
+.filial-card .card-icono { background: none; width: auto; height: auto; font-size: 2.4rem; margin-bottom: 16px; }
+
+/* ===== FAQ acordeon ===== */
+.faq-item { cursor: pointer; }
+.faq-signo { transition: transform 0.2s ease; }
+.faq-item.faq-abierto .faq-signo { transform: rotate(45deg); }
