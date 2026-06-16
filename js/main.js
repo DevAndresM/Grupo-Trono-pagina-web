@@ -111,18 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
     faqItems.forEach(item => {
       item.addEventListener('click', () => {
         const yaAbierto = item.classList.contains('faq-abierto');
-        // Cerrar todas
-        faqItems.forEach(otro => {
-          otro.classList.remove('faq-abierto');
-          const resp = otro.querySelector('.faq-resp');
-          if (resp) resp.style.display = 'none';
-        });
+        // Cerrar todas (la animación la maneja el CSS)
+        faqItems.forEach(otro => otro.classList.remove('faq-abierto'));
         // Abrir la actual si no lo estaba
-        if (!yaAbierto) {
-          item.classList.add('faq-abierto');
-          const resp = item.querySelector('.faq-resp');
-          if (resp) resp.style.display = 'block';
-        }
+        if (!yaAbierto) item.classList.add('faq-abierto');
       });
     });
   }

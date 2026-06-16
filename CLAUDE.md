@@ -1,12 +1,12 @@
 # CLAUDE.md — Página Web Grupo Trono v2
 
-> Contexto de trabajo para Claude Code. Actualizado: 2026-05-26.
+> Contexto de trabajo para Claude Code. Actualizado: 2026-06-15.
 
 ---
 
 ## Qué es este proyecto
 
-Sitio web corporativo de **Grupo Trono** — holding tecnológico colombiano con 5 filiales.
+Sitio web corporativo de **Grupo Trono** — holding tecnológico colombiano con 7 filiales (Productions, Hardware, Software, Security, Games, Net, Energy).
 Propósito: presencia de marca, captación de clientes, SEO orgánico en Colombia y Latinoamérica.
 
 - **URL producción:** https://www.grupotrono.com
@@ -49,10 +49,12 @@ Propósito: presencia de marca, captación de clientes, SEO orgánico en Colombi
 │   ├── hardware/index.html
 │   ├── software/index.html
 │   ├── security/index.html
-│   └── games/index.html
-├── css/styles.css                      # Todos los estilos (versión actual: ?v=6)
-├── js/main.js                          # Todo el JS (versión actual: ?v=4)
-├── sitemap.xml                         # Sitemap para Google (12 URLs)
+│   ├── games/index.html
+│   ├── net/index.html                  # Trono Net — infraestructura y telecomunicaciones
+│   └── energy/index.html               # Trono Energy — energías renovables (solar)
+├── css/styles.css                      # Todos los estilos
+├── js/main.js                          # Todo el JS (incluye acordeón FAQ)
+├── sitemap.xml                         # Sitemap para Google (14 URLs)
 ├── robots.txt                          # Permite indexación total + apunta al sitemap
 ├── CNAME                               # www.grupotrono.com
 ├── img/
@@ -132,7 +134,7 @@ Se usa `window.location.pathname` (no `window.location.href`) para detectar la p
 - `sitemap.xml` en raíz con 12 URLs, prioridades y `lastmod`
 - `robots.txt` con `Allow: /` y referencia al sitemap
 - Todas las páginas tienen: `<title>`, `<meta description>`, `<meta keywords>`, `<link rel="canonical">`, Open Graph completo (`og:locale: es_CO`), Twitter Card
-- `index.html`: Schema.org **Organization** JSON-LD (5 filiales con `hasOfferCatalog`)
+- `index.html`: Schema.org **Organization** JSON-LD (7 filiales con `hasOfferCatalog`)
 - `index.html`: Schema.org **WebSite** JSON-LD con `SearchAction` (Sitelinks Search Box)
 - Páginas de servicio: Schema.org **Service** JSON-LD individual
 - `og:image` apunta a `/img/logo-grupo-trono.png` en todas las páginas
@@ -200,10 +202,13 @@ Estado real de las integraciones (verificado en código, 2026-06-15):
 - [x] **Número WhatsApp real** — `573161366932` propagado a las 12 páginas (2026-06-15). Antes solo estaba en `index.html`
 - [x] **Formspree conectado** — endpoint `https://formspree.io/f/maqkzndy` en `contacto/index.html` (2026-06-15)
 - [x] **Política de privacidad y Términos** — creadas en `privacidad/` y `terminos/` (Ley 1581/2012 + Decreto 1377/2013), enlazadas en footers + checkbox del form (2026-06-15)
-- [ ] **URLs redes sociales** — ⏳ usuario aún no crea las redes; pendiente reemplazar `href="#"` en footers cuando pase las URLs
-- [ ] **Logos Trono Net y Trono Energy** — placeholders en navbar marcados como "Pronto", esperando diseñador
+- [x] **Trono Net y Trono Energy como filiales reales** (2026-06-15) — creadas `servicios/net/` (infraestructura y telecomunicaciones) y `servicios/energy/` (energías renovables, solar como pilar). Integradas en nav (con coronas `trono_net_corona.png`/`trono_energy_corona.png`), footers (16 HTML), home (tarjetas + stat 7 + Schema.org), nosotros (árbol corporativo), contacto (selector) y sitemap. Ya NO son "Pronto".
+- [x] **Equipo (nosotros)** actualizado (2026-06-15) — orden Elio · Andrés · Ediberto + Lorena. Cargos: Elio "Ingeniero de redes y líder en energías", Andrés "Ingeniero de Software · CEO", Ediberto "Líder de relaciones comerciales", Lorena "Directora creativa". Todos en dorado.
+- [x] **Responsive** (2026-06-15) — grids inline que no colapsaban ahora usan clase `.resp-grid` (+ `.resp-grid-feat`) con media query `!important` a ≤768px.
+- [ ] **URLs redes sociales** — ⏳ usuario aún no crea las redes; pendiente reemplazar `href="#"` en footers cuando pase las URLs. (Bug resuelto: `facebook.png`/`linkedin.png` tenían fondo opaco → cuadrado blanco con el filtro del footer; reemplazados por `facebook.svg`/`linkedin.svg` transparentes.)
+- [ ] **Imágenes mini de servicios** — pendiente: cámara (hardware), impresora, QR de restaurante (software), CCTV (security), gamificación (games). Net/Energy usan tiles de emoji+gradiente (sin foto). El usuario quiere buscarlas en internet.
 - [ ] **Fotos reales de portafolio** — actualmente usa placeholders de imagen
-- [ ] **Artículos de blog reales** — `blog/articulo-ejemplo/` es un demo
+- [ ] **Artículos de blog reales** — `blog/articulo-ejemplo/` es un demo. ⚠️ Bug pendiente: el nav "Blog" apunta a `/` y los artículos enlazan a `articulo-ejemplo.html` (deberían ser `/blog/` y `/blog/articulo-ejemplo/`).
 
 ### Baja prioridad / futuro
 - [ ] **Newsletter/suscripción** — integrar Brevo o Mailchimp en sección de blog
@@ -259,6 +264,20 @@ Get-ChildItem -Recurse -Filter "*.html" | ForEach-Object {
 ```
 
 ---
+
+## Notas técnicas
+
+- **⚠️ Codificación al editar HTML en lote con PowerShell 5.1.** Los HTML del proyecto están en UTF-8 (algunos con BOM, otros sin BOM). `Get-Content -Raw` en PowerShell 5.1 lee los archivos **sin BOM** como Windows-1252 y, al reescribir con `Set-Content -Encoding UTF8`, corrompe las tildes (`í`→`Ã­`). **Usar siempre .NET** para reemplazos masivos:
+  ```powershell
+  $enc = New-Object System.Text.UTF8Encoding($true)   # UTF-8 con BOM
+  Get-ChildItem -Recurse -Filter *.html | ForEach-Object {
+    $c = [System.IO.File]::ReadAllText($_.FullName)    # autodetecta BOM, asume UTF-8
+    $c = $c.Replace('viejo','nuevo')
+    [System.IO.File]::WriteAllText($_.FullName, $c, $enc)
+  }
+  ```
+  Tras cualquier edición en lote, verificar: `grep -rl "Ã©\|Ã­\|Ã³\|Ã±" --include=*.html .` debe dar 0.
+- **Footers no uniformes.** Los footers de `blog/index.html` y `blog/articulo-ejemplo/` tienen un formato distinto al resto (listaban menos filiales). Revisar ambos formatos al hacer cambios globales de footer.
 
 ## Notas de seguridad
 
