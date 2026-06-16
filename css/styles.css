@@ -1475,3 +1475,10 @@ img {
 .faq-item { cursor: pointer; }
 .faq-signo { transition: transform 0.2s ease; }
 .faq-item.faq-abierto .faq-signo { transform: rotate(45deg); }
+
+/* ===== Grids inline responsive (colapsan en movil/tablet) ===== */
+@media (max-width: 768px) {
+  .resp-grid { grid-template-columns: 1fr !important; max-width: 100% !important; }
+  .resp-grid > * { margin-top: 0 !important; }
+  .resp-grid-feat { padding: 28px !important; gap: 28px !important; }
+}
