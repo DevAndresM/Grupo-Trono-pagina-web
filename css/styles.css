@@ -1202,7 +1202,7 @@ img {
   max-width: 520px;
   width: auto;
   height: auto;
-  margin-bottom: 28px;
+  margin: 0 auto 28px;
   display: block;
   filter: drop-shadow(0 4px 24px rgba(0,0,0,0.5));
 }
