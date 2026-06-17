@@ -1,6 +1,6 @@
 # CLAUDE.md — Página Web Grupo Trono v2
 
-> Contexto de trabajo para Claude Code. Actualizado: 2026-06-15.
+> Contexto de trabajo para Claude Code. Actualizado: 2026-06-17.
 
 ---
 
@@ -208,6 +208,7 @@ Estado real de las integraciones (verificado en código, 2026-06-15):
 - [ ] **URLs redes sociales** — ⏳ usuario aún no crea las redes; pendiente reemplazar `href="#"` en footers cuando pase las URLs. (Bug resuelto: `facebook.png`/`linkedin.png` tenían fondo opaco → cuadrado blanco con el filtro del footer; reemplazados por `facebook.svg`/`linkedin.svg` transparentes.)
 - [x] **Imágenes mini de servicios** (2026-06-15) — Net/Energy con 12 fotos reales en sus tiles (estilo `mini-img` como las demás). Reemplazadas además hw-camera, hw-printer, sw-qr, sec-cctv, gm-gamif. Todas **CC0/dominio público** (uso comercial libre, sin atribución) descargadas vía API de Openverse. El usuario puede sustituirlas por fotos propias cuando quiera.
 - [x] **FAQ animada, banner "Muchas más +", botones sociales en color oficial, bug nav del blog** (2026-06-15).
+- [x] **Logo estirado en Net/Energy** (2026-06-17) — `.servicio-nombre-logo` tenía `width: 100%` que forzaba el logo a ocupar todo el ancho del contenedor, distorsionando logos más compactos. Corregido a `width: auto` (bounded por `max-width: 520px` y `max-height: 180px`).
 - [ ] **Fotos reales de portafolio** — actualmente usa placeholders de imagen
 - [ ] **Artículos de blog reales** — `blog/articulo-ejemplo/` es un demo. ⚠️ Bug pendiente: el nav "Blog" apunta a `/` y los artículos enlazan a `articulo-ejemplo.html` (deberían ser `/blog/` y `/blog/articulo-ejemplo/`).
 
