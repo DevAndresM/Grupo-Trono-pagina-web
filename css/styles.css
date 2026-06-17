@@ -667,19 +667,20 @@ p { color: var(--gris-claro); }
   width: 20px;
   height: 20px;
   object-fit: contain;
-  filter: brightness(0) invert(1);
+  /* Sin filtro: cada logo conserva su color oficial */
   -webkit-user-drag: none;
   user-drag: none;
   pointer-events: none;
+  transition: transform 0.2s ease;
 }
 
 .footer-social a:hover {
-  background: rgba(201,168,76,0.1);
+  background: rgba(201,168,76,0.12);
   border-color: var(--dorado);
 }
 
 .footer-social a:hover img {
-  filter: brightness(0) saturate(100%) invert(78%) sepia(55%) saturate(400%) hue-rotate(5deg) brightness(95%);
+  transform: scale(1.12);
 }
 
 /* ── Protección global de imágenes ─────────────────────────── */
@@ -1199,7 +1200,7 @@ img {
 .servicio-nombre-logo {
   max-height: 180px;
   max-width: 520px;
-  width: 100%;
+  width: auto;
   height: auto;
   margin-bottom: 28px;
   display: block;
