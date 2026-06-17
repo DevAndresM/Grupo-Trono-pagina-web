@@ -209,11 +209,13 @@ Estado real de las integraciones (verificado en código, 2026-06-15):
 - [x] **Imágenes mini de servicios** (2026-06-15) — Net/Energy con 12 fotos reales en sus tiles (estilo `mini-img` como las demás). Reemplazadas además hw-camera, hw-printer, sw-qr, sec-cctv, gm-gamif. Todas **CC0/dominio público** (uso comercial libre, sin atribución) descargadas vía API de Openverse. El usuario puede sustituirlas por fotos propias cuando quiera.
 - [x] **FAQ animada, banner "Muchas más +", botones sociales en color oficial, bug nav del blog** (2026-06-15).
 - [x] **Logo estirado en Net/Energy** (2026-06-17) — `.servicio-nombre-logo` tenía `width: 100%` que forzaba el logo a ocupar todo el ancho del contenedor, distorsionando logos más compactos. Corregido a `width: auto` (bounded por `max-width: 520px` y `max-height: 180px`).
+- [x] **Logos de filiales centrados visualmente** (2026-06-17) — Los 5 logos (Productions, Hardware, Software, Security, Games) tenían padding transparente simétrico dentro del PNG que los hacía verse centrados y pequeños. Recortados con PowerShell + `System.Drawing.Bitmap` para eliminar el padding. Net y Energy no lo necesitaban (padding mínimo).
+- [x] **Servicios nav no navega al hacer click** (2026-06-17) — El link `href="/servicios/productions/"` en "Servicios ▾" redirigía a Productions al hacer click. Reemplazado por `href="javascript:void(0)"` en los 9 HTML no-servicios, preservando el dropdown CSS hover.
 - [ ] **Fotos reales de portafolio** — actualmente usa placeholders de imagen
 - [ ] **Artículos de blog reales** — `blog/articulo-ejemplo/` es un demo. ⚠️ Bug pendiente: el nav "Blog" apunta a `/` y los artículos enlazan a `articulo-ejemplo.html` (deberían ser `/blog/` y `/blog/articulo-ejemplo/`).
 
 ### Baja prioridad / futuro
-- [ ] **Newsletter/suscripción** — integrar Brevo o Mailchimp en sección de blog
+- [x] **Newsletter/suscripción** — Brevo integrado en `blog/index.html` (2026-06-17). Form real con `method="POST"` al endpoint de Brevo. Ver sección "Newsletter / Blog" más abajo.
 - [x] **Google Analytics GA4** — ID `G-H5ZJLZ0YP8` instalado en los 12 HTML (2026-06-11). Administradores: mmgamingdev@gmail.com + grupotrono@gmail.com (2026-06-12).
 - [x] **Google Ads** — Cuenta #217-744-3743 creada (mmgamingdev@gmail.com). Campaña "Máximo rendimiento" configurada (2026-06-12): 3 títulos, 1 título largo, 2 descripciones, 20 imágenes, 2 logos, 20 temas de búsqueda, Colombia, Español, presupuesto COP20,000/día, estrategia Conversiones. Optimization score: 87.7%. **PENDIENTE LANZAR**: clic en "Enviar" en paso de pago (cargará COP50,000 en Mastercard •••• 2310 + gasto diario de COP20,000). Oferta activa: invierte USD350 → recibe USD350 en crédito (válida hasta 11 ago 2026). **Pendiente post-lanzamiento**: agregar grupotrono@gmail.com como admin (bloqueado hasta completar billing).
 - [ ] **Página de videos** — actualmente tiene video de Rick Astley como demo
@@ -234,7 +236,7 @@ Estado real de las integraciones (verificado en código, 2026-06-15):
 > **Regla:** Claude edita archivos localmente; **Andres hace el commit/push manual desde GitHub Desktop**. Claude solo debe confirmar explícitamente cuándo los cambios están listos para commitear (todos los archivos guardados y verificados).
 
 ### Estado actual para push
-✅ **Listo para commit/push** (2026-06-15): WhatsApp propagado, Formspree conectado, páginas legales creadas y enlazadas, CSS `.legal-doc` añadido. Todo verificado sirviendo local con `python -m http.server` (200 OK en `/privacidad/`, `/terminos/`, `/contacto/`).
+✅ **Listo para commit/push** (2026-06-17): Logo fix Net/Energy, logos PNG recortados (5 filiales), Servicios nav `javascript:void(0)`, newsletter Brevo real en `blog/index.html`.
 
 ## Comandos frecuentes
 
@@ -264,6 +266,54 @@ Get-ChildItem -Recurse -Filter "*.html" | ForEach-Object {
   (Get-Content $_.FullName) -replace 'styles\.css\?v=6', 'styles.css?v=7' | Set-Content $_.FullName
 }
 ```
+
+---
+
+## Newsletter / Blog
+
+### Brevo — Newsletter Grupo Trono
+
+| Campo | Valor |
+|-------|-------|
+| **Cuenta** | mmgamingdev@gmail.com |
+| **Form ID** | `6a3244989c3948f5ab44a59e` |
+| **Lista** | "Newsletter Grupo Trono" |
+| **Confirmación** | Sin doble opt-in (suscripción directa) |
+| **Endpoint POST** | `https://fdcd0e34.sibforms.com/serve/MUIFAO-eXe2Y7TSVklxxQjLDjAoYBSPeHwPjbqOQF-TMGjrI8bCpJuFuQn33e6EZUVg6eAjjuPPD0t2vPKqbwEkKOX7VcsIx4rTp7b1Hlc1CuWavb-1E1SjPGDs5lWOeW9tcdIbBY1YzdZLaBcnOAJv2dKVUr3cLDRSjOpiMwdtwuE-z9L1gCciaoDoRWgCK_743p00kHlEFiXYMlA==` |
+| **Campos requeridos** | `EMAIL` (texto), `email_address_check` (anti-spam vacío), `locale=es`, `html_type=simple` |
+| **Limite plan gratuito** | 300 emails/día, suscriptores ilimitados |
+
+El form en `blog/index.html` hace POST directo a ese endpoint — no JS externo, no iframes. Al enviar, Brevo redirige al usuario a su página de confirmación y registra el contacto en la lista.
+
+Para enviar una campaña a los suscriptores: **app.brevo.com → Emails → Crear campaña**.
+
+---
+
+### Flujo para publicar un artículo nuevo
+
+**Qué decirle a Claude** (copiar y rellenar):
+
+```
+Nuevo artículo:
+Título: "..."
+Filial: Trono [Productions/Hardware/Software/Security/Games/Net/Energy]
+Categoría: [Producción / Hardware / Software / Ciberseguridad / Videojuegos / Redes / Energía]
+Imagen: nombre-imagen.jpg   ← subir a /img/blog/
+Fecha: YYYY-MM-DD
+Resumen (1-2 oraciones): ...
+Contenido: [texto completo o puntos clave]
+```
+
+**Lo que hace Claude automáticamente:**
+1. Genera `blog/slug-del-articulo/index.html` completo
+2. Agrega la tarjeta del artículo en `blog/index.html`
+3. Agrega la URL en `sitemap.xml`
+
+**Lo que hace Andres:**
+1. Push desde GitHub Desktop
+2. Enviar campaña en Brevo: app.brevo.com → Emails → Crear campaña → seleccionar lista "Newsletter Grupo Trono" → pegar asunto y cuerpo → enviar
+
+> **Slug del artículo:** usar kebab-case sin tildes ni ñ. Ej: `como-proteger-tu-red-wifi`. La URL resultante será `grupotrono.com/blog/como-proteger-tu-red-wifi/`.
 
 ---
 
