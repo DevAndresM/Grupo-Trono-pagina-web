@@ -269,6 +269,26 @@ Get-ChildItem -Recurse -Filter "*.html" | ForEach-Object {
 
 ---
 
+## Correo corporativo — Cloudflare Email Routing
+
+El dominio `grupotrono.com` ya está en Cloudflare (nameservers `dorthy.ns.cloudflare.com` / `razvan.ns.cloudflare.com`), con Email Routing activo desde antes (cuenta: Grupotrono@gmail.com en Cloudflare).
+
+Reglas activas (2026-06-19) — todas reenvían a **grupotrono@gmail.com**:
+- `contacto@grupotrono.com` (la que aparece en el sitio web)
+- `productions@grupotrono.com`
+- `hardware@grupotrono.com`
+- `software@grupotrono.com`
+- `security@grupotrono.com`
+- `games@grupotrono.com`
+- `net@grupotrono.com`
+- `energy@grupotrono.com`
+
+Reglas preexistentes (no tocadas): `eliocastro@grupotrono.com` → `castrourbay@gmail.com`, `andresmendoza@grupotrono.com` → `grupotrono@gmail.com`.
+
+Catch-all sigue desactivado con acción "Descartar" — cualquier correo a una dirección no listada arriba se pierde silenciosamente. Si se necesita capturar todo lo demás, activar el catch-all y cambiarlo a "Enviar a un correo electrónico" → grupotrono@gmail.com.
+
+Gestión: dash.cloudflare.com → cuenta Grupotrono@gmail.com → dominio grupotrono.com → Email Routing → Reglas de enrutamiento.
+
 ## Newsletter / Blog
 
 ### Brevo — Newsletter Grupo Trono
