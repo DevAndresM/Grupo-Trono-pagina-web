@@ -220,7 +220,7 @@ Estado real de las integraciones (verificado en código, 2026-06-15):
 - [x] **Google Ads** — Cuenta #217-744-3743 creada (mmgamingdev@gmail.com). Campaña "Máximo rendimiento" configurada (2026-06-12): 3 títulos, 1 título largo, 2 descripciones, 20 imágenes, 2 logos, 20 temas de búsqueda, Colombia, Español, presupuesto COP20,000/día, estrategia Conversiones. Optimization score: 87.7%. **PENDIENTE LANZAR**: clic en "Enviar" en paso de pago (cargará COP50,000 en Mastercard •••• 2310 + gasto diario de COP20,000). Oferta activa: invierte USD350 → recibe USD350 en crédito (válida hasta 11 ago 2026). **Pendiente post-lanzamiento**: agregar grupotrono@gmail.com como admin (bloqueado hasta completar billing).
 - [ ] **Página de videos** — actualmente tiene video de Rick Astley como demo
 - [ ] **Portafolio real** — poblar con proyectos reales de Grupo Trono
-- [ ] **Favicon optimizado** — 32x32 y 192x192 versiones + `apple-touch-icon`
+- [x] **Favicon optimizado** (2026-06-19) — El favicon era la corona blanca sobre fondo transparente, invisible en fondos claros (ej. círculo blanco de Google en resultados de búsqueda). Regenerado con fondo negro de marca (`#0A0A0A`, esquinas redondeadas) + corona blanca centrada, garantizando contraste en cualquier fondo. Archivos: `favicon.png` (32x32), `favicon-192.png` (192x192), `apple-touch-icon.png` (180x180), `favicon-512.png` (master). `<link rel="icon">` y `apple-touch-icon` agregados en los 16 HTML.
 
 ---
 
