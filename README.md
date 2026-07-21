@@ -22,20 +22,4 @@ HTML + CSS + JS vanilla (sin framework).
 └── img/                Assets gráficos
 ```
 
-## Desarrollo local
-
-Abrir `index.html` en navegador o servir con cualquier server estático:
-
-```bash
-python -m http.server 8080
-# o
-npx serve .
-```
-
-## Despliegue
-
-Por definir (Cloudflare Pages / Vercel / Netlify / hosting propio).
-
----
-
 Grupo Trono — Holding tecnológico.
